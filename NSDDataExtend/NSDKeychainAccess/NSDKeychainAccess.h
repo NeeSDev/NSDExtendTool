@@ -3,7 +3,7 @@
 //  KeychainAccessSample
 //
 //  Created by Ravi Prakash on 17/11/14.
-//  Copyright (c) 2014 helpshift. All rights reserved.
+//  Copyright (c) 2014 NeeSDev. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

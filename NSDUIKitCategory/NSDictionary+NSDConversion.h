@@ -2,8 +2,8 @@
 //  NSDictionary+CustomFunc.h
 //  EtahShadow
 //
-//  Created by apple on 2019/1/11.
-//  Copyright © 2019 Nee. All rights reserved.
+//  Created by NeeSDev on 2019/1/11.
+//  Copyright © 2019 NeeSDev. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

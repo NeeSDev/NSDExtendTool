@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "NSDUIKitCategory"
+  s.name         = "NSDExtendTool"
   s.version      = "0.0.1"
-  s.summary      = "UIKit扩展，意在提高coding效率"
+  s.summary      = "日常开发归纳"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                  个人使用，根据个人习惯扩展UIKit，方便coding，提高coding效率
+                  意在便利日常开发，将日常中经常用到的代码块封装归类
                    DESC
 
   s.homepage     = "https://github.com/NeeSDev"
@@ -81,7 +81,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/NeeSDev/NeeSUIKitCategory.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/NeeSDev/NSDExtendTool.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
