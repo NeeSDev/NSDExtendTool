@@ -20,7 +20,7 @@
 }
 
 - (void)nsd_KeychainSetValue:(id)data forKey:(NSString*)key {
-    NSMutableDictionary *keychainQuery = [KeychainAccess nsd_KeychainGetQuery:key];
+    NSMutableDictionary *keychainQuery = [NSDKeychainAccess nsd_KeychainGetQuery:key];
     SecItemDelete((__bridge CFDictionaryRef)keychainQuery);
     [keychainQuery setObject:[NSKeyedArchiver archivedDataWithRootObject:data] forKey:(__bridge id)kSecValueData];
     SecItemAdd((__bridge CFDictionaryRef)keychainQuery, NULL);
@@ -28,7 +28,7 @@
 
 - (id)nsd_KeychainGetValueForKey:(NSString *)key {
     id value = nil;
-    NSMutableDictionary *keychainQuery = [KeychainAccess nsd_KeychainGetQuery:key];
+    NSMutableDictionary *keychainQuery = [NSDKeychainAccess nsd_KeychainGetQuery:key];
     //uncomment to see keychainQuery
     //NSLog(@"%@",keychainQuery);
     CFDataRef keyData = NULL;
@@ -41,7 +41,7 @@
 }
 
 - (void)nsd_KeychainDeleteValueForKey:(NSString *)key {
-    NSMutableDictionary *keychainQuery = [KeychainAccess nsd_KeychainGetQuery:key];
+    NSMutableDictionary *keychainQuery = [NSDKeychainAccess nsd_KeychainGetQuery:key];
     SecItemDelete((__bridge CFDictionaryRef)keychainQuery);
 }
 

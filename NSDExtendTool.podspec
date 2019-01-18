@@ -101,13 +101,13 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'NSDDataExtend' do |ss|
-    # ss.public_header_files = 'NSDDataExtend/NSDDataExtend.h'
-    # ss.source_files = 'NSDDataExtend/NSDDataExtend.h'
+    ss.public_header_files = 'NSDDataExtend/*.h'
+    ss.source_files = 'NSDDataExtend/*.{h,m}'
 
-    ss.subspec 'NSDKeychainAccess' do |sss|
-      sss.source_files = 'NSDDataExtend/NSDKeychainAccess/*.{h,m}'
-      sss.public_header_files = 'NSDDataExtend/NSDKeychainAccess/*.h'
-    end
+    # ss.subspec 'NSDKeychainAccess' do |sss|
+    #   sss.source_files = 'NSDDataExtend/NSDKeychainAccess/*.{h,m}'
+    #   sss.public_header_files = 'NSDDataExtend/NSDKeychainAccess/*.h'
+    # end
   end
   #s.exclude_files = "Classes/Exclude"
 
