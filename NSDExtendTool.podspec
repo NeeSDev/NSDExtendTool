@@ -92,12 +92,22 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.public_header_files  = "NeeSUIKitCategory/NeeSUIKitCategory.h"
-  s.source_files  = "NeeSUIKitCategory/NeeSUIKitCategory.h"
+  s.public_header_files  = "NSDExtendTool.h"
+  s.source_files  = "NSDExtendTool.h"
 
-  s.subspec 'NeeSUIKitCategory' do |ss|
-    ss.source_files = 'NeeSUIKitCategory/*.{h,m}'
-    ss.public_header_files = 'NeeSUIKitCategory/*.h'
+  s.subspec 'NSDUIKitCategory' do |ss|
+    ss.public_header_files = 'NSDUIKitCategory/*.h'
+    ss.source_files = 'NSDUIKitCategory/*.{h,m}'
+  end
+
+  s.subspec 'NSDDataExtend' do |ss|
+    # ss.public_header_files = 'NSDDataExtend/NSDDataExtend.h'
+    # ss.source_files = 'NSDDataExtend/NSDDataExtend.h'
+
+    ss.subspec 'NSDKeychainAccess' do |sss|
+      sss.source_files = 'NSDDataExtend/NSDKeychainAccess/*.{h,m}'
+      sss.public_header_files = 'NSDDataExtend/NSDKeychainAccess/*.h'
+    end
   end
   #s.exclude_files = "Classes/Exclude"
 
