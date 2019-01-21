@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "NSDUIKitCategory"
-  s.version      = "0.0.1"
+  s.version      = "1.0.1"
   s.summary      = "UIKit扩展，意在提高coding效率"
 
   # This description is used to generate tags and improve search results.
@@ -92,12 +92,12 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.public_header_files  = "NeeSUIKitCategory/NeeSUIKitCategory.h"
-  s.source_files  = "NeeSUIKitCategory/NeeSUIKitCategory.h"
+  s.public_header_files  = "../NeeSUIKitCategory/NeeSUIKitCategory.h"
+  s.source_files  = "../NeeSUIKitCategory/NeeSUIKitCategory.h"
 
   s.subspec 'NeeSUIKitCategory' do |ss|
-    ss.source_files = 'NeeSUIKitCategory/*.{h,m}'
-    ss.public_header_files = 'NeeSUIKitCategory/*.h'
+    ss.source_files = '../NeeSUIKitCategory/*.{h,m}'
+    ss.public_header_files = '../NeeSUIKitCategory/*.h'
   end
   #s.exclude_files = "Classes/Exclude"
 
