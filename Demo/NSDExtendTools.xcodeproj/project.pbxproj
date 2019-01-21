@@ -13,13 +13,6 @@
 		186E067C21F1DC4D0013E0F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 186E067B21F1DC4D0013E0F4 /* Assets.xcassets */; };
 		186E067F21F1DC4D0013E0F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186E067D21F1DC4D0013E0F4 /* LaunchScreen.storyboard */; };
 		186E068221F1DC4D0013E0F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E068121F1DC4D0013E0F4 /* main.m */; };
-		186E069B21F1DCE00013E0F4 /* NSDKeychainAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E069821F1DCE00013E0F4 /* NSDKeychainAccess.m */; };
-		186E06AC21F1DCE70013E0F4 /* UIView+NSDQuickCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E069D21F1DCE70013E0F4 /* UIView+NSDQuickCoding.m */; };
-		186E06AD21F1DCE70013E0F4 /* UIButton+NSDQuickCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E069E21F1DCE70013E0F4 /* UIButton+NSDQuickCoding.m */; };
-		186E06AE21F1DCE70013E0F4 /* UIImage+NSDCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E069F21F1DCE70013E0F4 /* UIImage+NSDCompress.m */; };
-		186E06B021F1DCE70013E0F4 /* NSDictionary+NSDConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E06A121F1DCE70013E0F4 /* NSDictionary+NSDConversion.m */; };
-		186E06B121F1DCE70013E0F4 /* UIImageView+NSDQuickCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E06A221F1DCE70013E0F4 /* UIImageView+NSDQuickCoding.m */; };
-		186E06B321F1DCE70013E0F4 /* UILabel+NSDQuickCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E06AB21F1DCE70013E0F4 /* UILabel+NSDQuickCoding.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,23 +26,6 @@
 		186E067E21F1DC4D0013E0F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		186E068021F1DC4D0013E0F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		186E068121F1DC4D0013E0F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		186E069321F1DCE00013E0F4 /* NSDDataExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDDataExtend.h; sourceTree = "<group>"; };
-		186E069721F1DCE00013E0F4 /* NSDKeychainAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDKeychainAccess.h; sourceTree = "<group>"; };
-		186E069821F1DCE00013E0F4 /* NSDKeychainAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDKeychainAccess.m; sourceTree = "<group>"; };
-		186E069D21F1DCE70013E0F4 /* UIView+NSDQuickCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NSDQuickCoding.m"; sourceTree = "<group>"; };
-		186E069E21F1DCE70013E0F4 /* UIButton+NSDQuickCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+NSDQuickCoding.m"; sourceTree = "<group>"; };
-		186E069F21F1DCE70013E0F4 /* UIImage+NSDCompress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+NSDCompress.m"; sourceTree = "<group>"; };
-		186E06A121F1DCE70013E0F4 /* NSDictionary+NSDConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NSDConversion.m"; sourceTree = "<group>"; };
-		186E06A221F1DCE70013E0F4 /* UIImageView+NSDQuickCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+NSDQuickCoding.m"; sourceTree = "<group>"; };
-		186E06A321F1DCE70013E0F4 /* NSDUIKitCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDUIKitCategory.h; sourceTree = "<group>"; };
-		186E06A421F1DCE70013E0F4 /* UILabel+NSDQuickCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+NSDQuickCoding.h"; sourceTree = "<group>"; };
-		186E06A621F1DCE70013E0F4 /* UIButton+NSDQuickCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+NSDQuickCoding.h"; sourceTree = "<group>"; };
-		186E06A721F1DCE70013E0F4 /* UIView+NSDQuickCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NSDQuickCoding.h"; sourceTree = "<group>"; };
-		186E06A821F1DCE70013E0F4 /* UIImageView+NSDQuickCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+NSDQuickCoding.h"; sourceTree = "<group>"; };
-		186E06A921F1DCE70013E0F4 /* NSDictionary+NSDConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NSDConversion.h"; sourceTree = "<group>"; };
-		186E06AA21F1DCE70013E0F4 /* UIImage+NSDCompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+NSDCompress.h"; sourceTree = "<group>"; };
-		186E06AB21F1DCE70013E0F4 /* UILabel+NSDQuickCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+NSDQuickCoding.m"; sourceTree = "<group>"; };
-		186E06B421F1DD080013E0F4 /* NSDExtendTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSDExtendTool.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,10 +42,14 @@
 		186E066621F1DC4C0013E0F4 = {
 			isa = PBXGroup;
 			children = (
-				186E06B421F1DD080013E0F4 /* NSDExtendTool.h */,
-				186E069C21F1DCE70013E0F4 /* NSDUIKitCategory */,
-				186E069221F1DCE00013E0F4 /* NSDDataExtend */,
-				186E067121F1DC4C0013E0F4 /* Demo */,
+				186E067221F1DC4C0013E0F4 /* AppDelegate.h */,
+				186E067321F1DC4C0013E0F4 /* AppDelegate.m */,
+				186E067821F1DC4C0013E0F4 /* Main.storyboard */,
+				186E067B21F1DC4D0013E0F4 /* Assets.xcassets */,
+				186E067D21F1DC4D0013E0F4 /* LaunchScreen.storyboard */,
+				186E068021F1DC4D0013E0F4 /* Info.plist */,
+				186E068121F1DC4D0013E0F4 /* main.m */,
+				186E067121F1DC4C0013E0F4 /* UIKitCategoryDemo */,
 				186E067021F1DC4C0013E0F4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,58 +62,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		186E067121F1DC4C0013E0F4 /* Demo */ = {
+		186E067121F1DC4C0013E0F4 /* UIKitCategoryDemo */ = {
 			isa = PBXGroup;
 			children = (
-				186E067221F1DC4C0013E0F4 /* AppDelegate.h */,
-				186E067321F1DC4C0013E0F4 /* AppDelegate.m */,
 				186E067521F1DC4C0013E0F4 /* ViewController.h */,
 				186E067621F1DC4C0013E0F4 /* ViewController.m */,
-				186E067821F1DC4C0013E0F4 /* Main.storyboard */,
-				186E067B21F1DC4D0013E0F4 /* Assets.xcassets */,
-				186E067D21F1DC4D0013E0F4 /* LaunchScreen.storyboard */,
-				186E068021F1DC4D0013E0F4 /* Info.plist */,
-				186E068121F1DC4D0013E0F4 /* main.m */,
 			);
-			path = Demo;
-			sourceTree = "<group>";
-		};
-		186E069221F1DCE00013E0F4 /* NSDDataExtend */ = {
-			isa = PBXGroup;
-			children = (
-				186E069321F1DCE00013E0F4 /* NSDDataExtend.h */,
-				186E069621F1DCE00013E0F4 /* NSDKeychainAccess */,
-			);
-			path = NSDDataExtend;
-			sourceTree = "<group>";
-		};
-		186E069621F1DCE00013E0F4 /* NSDKeychainAccess */ = {
-			isa = PBXGroup;
-			children = (
-				186E069721F1DCE00013E0F4 /* NSDKeychainAccess.h */,
-				186E069821F1DCE00013E0F4 /* NSDKeychainAccess.m */,
-			);
-			path = NSDKeychainAccess;
-			sourceTree = "<group>";
-		};
-		186E069C21F1DCE70013E0F4 /* NSDUIKitCategory */ = {
-			isa = PBXGroup;
-			children = (
-				186E069D21F1DCE70013E0F4 /* UIView+NSDQuickCoding.m */,
-				186E069E21F1DCE70013E0F4 /* UIButton+NSDQuickCoding.m */,
-				186E069F21F1DCE70013E0F4 /* UIImage+NSDCompress.m */,
-				186E06A121F1DCE70013E0F4 /* NSDictionary+NSDConversion.m */,
-				186E06A221F1DCE70013E0F4 /* UIImageView+NSDQuickCoding.m */,
-				186E06A321F1DCE70013E0F4 /* NSDUIKitCategory.h */,
-				186E06A421F1DCE70013E0F4 /* UILabel+NSDQuickCoding.h */,
-				186E06A621F1DCE70013E0F4 /* UIButton+NSDQuickCoding.h */,
-				186E06A721F1DCE70013E0F4 /* UIView+NSDQuickCoding.h */,
-				186E06A821F1DCE70013E0F4 /* UIImageView+NSDQuickCoding.h */,
-				186E06A921F1DCE70013E0F4 /* NSDictionary+NSDConversion.h */,
-				186E06AA21F1DCE70013E0F4 /* UIImage+NSDCompress.h */,
-				186E06AB21F1DCE70013E0F4 /* UILabel+NSDQuickCoding.m */,
-			);
-			path = NSDUIKitCategory;
+			path = UIKitCategoryDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,14 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				186E06B121F1DCE70013E0F4 /* UIImageView+NSDQuickCoding.m in Sources */,
 				186E067721F1DC4C0013E0F4 /* ViewController.m in Sources */,
-				186E06AD21F1DCE70013E0F4 /* UIButton+NSDQuickCoding.m in Sources */,
-				186E06AC21F1DCE70013E0F4 /* UIView+NSDQuickCoding.m in Sources */,
-				186E06B321F1DCE70013E0F4 /* UILabel+NSDQuickCoding.m in Sources */,
-				186E069B21F1DCE00013E0F4 /* NSDKeychainAccess.m in Sources */,
-				186E06B021F1DCE70013E0F4 /* NSDictionary+NSDConversion.m in Sources */,
-				186E06AE21F1DCE70013E0F4 /* UIImage+NSDCompress.m in Sources */,
 				186E068221F1DC4D0013E0F4 /* main.m in Sources */,
 				186E067421F1DC4C0013E0F4 /* AppDelegate.m in Sources */,
 			);
