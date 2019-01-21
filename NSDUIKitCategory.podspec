@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "NSDDataExtend"
+  s.name         = "NSDUIKitCategory"
   s.version      = "1.0.1"
-  s.summary      = "数据处理封装"
+  s.summary      = "UIKit扩展，意在提高coding效率"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                  个人使用，基本数据处理，存储，方便coding，提高coding效率
+                  个人使用，根据个人习惯扩展UIKit，方便coding，提高coding效率
                    DESC
 
   s.homepage     = "https://github.com/NeeSDev"
@@ -81,7 +81,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/NeeSDev/NeeSUIKitCategory.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/NeeSDev/NSDExtendTool.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -92,12 +92,12 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.public_header_files  = "../NSDDataExtend/NSDDataExtend.h"
-  s.source_files  = "../NSDDataExtend/NSDDataExtend.h"
+  s.public_header_files  = "NSDUIKitCategory/NSDUIKitCategory.h"
+  s.source_files  = "NSDUIKitCategory/NSDUIKitCategory.h"
 
-  s.subspec 'NSDKeychainAccess' do |ss|
-    ss.source_files = '../NSDDataExtend/NSDKeychainAccess/*.{h,m}'
-    ss.public_header_files = '../NSDDataExtend/NSDKeychainAccess/*.h'
+  s.subspec 'NSDUIKitCategory' do |ss|
+    ss.public_header_files = 'NSDUIKitCategory/*.h'
+    ss.source_files = 'NSDUIKitCategory/*.{h,m}'
   end
   #s.exclude_files = "Classes/Exclude"
 

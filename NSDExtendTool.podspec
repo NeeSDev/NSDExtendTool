@@ -95,11 +95,6 @@ Pod::Spec.new do |s|
   s.public_header_files  = "NSDExtendTool.h"
   s.source_files  = "NSDExtendTool.h"
 
-  s.subspec 'NSDUIKitCategory' do |ss|
-    ss.public_header_files = 'NSDUIKitCategory/*.h'
-    ss.source_files = 'NSDUIKitCategory/*.{h,m}'
-  end
-
   s.subspec 'NSDDataExtend' do |ss|
     ss.public_header_files = 'NSDDataExtend/NSDDataExtend.h'
     ss.source_files = 'NSDDataExtend/NSDDataExtend.h'
