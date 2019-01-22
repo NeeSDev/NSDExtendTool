@@ -7,15 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1856446821F705B1008883D8 /* NSDTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856446721F705B1008883D8 /* NSDTextView.m */; };
+		1856447221F708F0008883D8 /* NSDBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856446C21F708F0008883D8 /* NSDBaseModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1856447321F708F0008883D8 /* NSDBaseRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856447021F708F0008883D8 /* NSDBaseRequester.m */; };
+		1856447421F708F0008883D8 /* NSDBaseStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856447121F708F0008883D8 /* NSDBaseStore.m */; };
 		186E067421F1DC4C0013E0F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E067321F1DC4C0013E0F4 /* AppDelegate.m */; };
 		186E067721F1DC4C0013E0F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E067621F1DC4C0013E0F4 /* ViewController.m */; };
 		186E067A21F1DC4C0013E0F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186E067821F1DC4C0013E0F4 /* Main.storyboard */; };
 		186E067C21F1DC4D0013E0F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 186E067B21F1DC4D0013E0F4 /* Assets.xcassets */; };
 		186E067F21F1DC4D0013E0F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186E067D21F1DC4D0013E0F4 /* LaunchScreen.storyboard */; };
 		186E068221F1DC4D0013E0F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E068121F1DC4D0013E0F4 /* main.m */; };
+		1870790121F6C5EB00EED8B5 /* UIView+NSDQuickCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 187078EB21F6C5EB00EED8B5 /* UIView+NSDQuickCoding.m */; };
+		1870790221F6C5EB00EED8B5 /* UIButton+NSDQuickCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 187078EC21F6C5EB00EED8B5 /* UIButton+NSDQuickCoding.m */; };
+		1870790321F6C5EB00EED8B5 /* UIImage+NSDCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = 187078ED21F6C5EB00EED8B5 /* UIImage+NSDCompress.m */; };
+		1870790521F6C5EB00EED8B5 /* NSDictionary+NSDConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 187078EF21F6C5EB00EED8B5 /* NSDictionary+NSDConversion.m */; };
+		1870790621F6C5EB00EED8B5 /* UIImageView+NSDQuickCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 187078F021F6C5EB00EED8B5 /* UIImageView+NSDQuickCoding.m */; };
+		1870790821F6C5EB00EED8B5 /* UILabel+NSDQuickCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 187078F921F6C5EB00EED8B5 /* UILabel+NSDQuickCoding.m */; };
+		1870790B21F6C5EB00EED8B5 /* NSDKeychainAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1870790021F6C5EB00EED8B5 /* NSDKeychainAccess.m */; };
+		F7489AAF2A2949FD985A1761 /* libPods-NSDExtendTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE04C9C769CBA312834A506 /* libPods-NSDExtendTools.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1012D10ABF5EC71F8812A9B8 /* Pods-NSDExtendTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSDExtendTools.debug.xcconfig"; path = "Target Support Files/Pods-NSDExtendTools/Pods-NSDExtendTools.debug.xcconfig"; sourceTree = "<group>"; };
+		1856446621F705B1008883D8 /* NSDTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDTextView.h; sourceTree = "<group>"; };
+		1856446721F705B1008883D8 /* NSDTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDTextView.m; sourceTree = "<group>"; };
+		1856446C21F708F0008883D8 /* NSDBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDBaseModel.m; sourceTree = "<group>"; };
+		1856446D21F708F0008883D8 /* NSDBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDBaseModel.h; sourceTree = "<group>"; };
+		1856446E21F708F0008883D8 /* NSDBaseRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDBaseRequester.h; sourceTree = "<group>"; };
+		1856446F21F708F0008883D8 /* NSDBaseStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDBaseStore.h; sourceTree = "<group>"; };
+		1856447021F708F0008883D8 /* NSDBaseRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDBaseRequester.m; sourceTree = "<group>"; };
+		1856447121F708F0008883D8 /* NSDBaseStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDBaseStore.m; sourceTree = "<group>"; };
 		186E066F21F1DC4C0013E0F4 /* NSDExtendTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSDExtendTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		186E067221F1DC4C0013E0F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		186E067321F1DC4C0013E0F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +47,24 @@
 		186E067E21F1DC4D0013E0F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		186E068021F1DC4D0013E0F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		186E068121F1DC4D0013E0F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		187078EB21F6C5EB00EED8B5 /* UIView+NSDQuickCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NSDQuickCoding.m"; sourceTree = "<group>"; };
+		187078EC21F6C5EB00EED8B5 /* UIButton+NSDQuickCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+NSDQuickCoding.m"; sourceTree = "<group>"; };
+		187078ED21F6C5EB00EED8B5 /* UIImage+NSDCompress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+NSDCompress.m"; sourceTree = "<group>"; };
+		187078EF21F6C5EB00EED8B5 /* NSDictionary+NSDConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NSDConversion.m"; sourceTree = "<group>"; };
+		187078F021F6C5EB00EED8B5 /* UIImageView+NSDQuickCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+NSDQuickCoding.m"; sourceTree = "<group>"; };
+		187078F121F6C5EB00EED8B5 /* NSDUIKitCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDUIKitCategory.h; sourceTree = "<group>"; };
+		187078F221F6C5EB00EED8B5 /* UILabel+NSDQuickCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+NSDQuickCoding.h"; sourceTree = "<group>"; };
+		187078F421F6C5EB00EED8B5 /* UIButton+NSDQuickCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+NSDQuickCoding.h"; sourceTree = "<group>"; };
+		187078F521F6C5EB00EED8B5 /* UIView+NSDQuickCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NSDQuickCoding.h"; sourceTree = "<group>"; };
+		187078F621F6C5EB00EED8B5 /* UIImageView+NSDQuickCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+NSDQuickCoding.h"; sourceTree = "<group>"; };
+		187078F721F6C5EB00EED8B5 /* NSDictionary+NSDConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NSDConversion.h"; sourceTree = "<group>"; };
+		187078F821F6C5EB00EED8B5 /* UIImage+NSDCompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+NSDCompress.h"; sourceTree = "<group>"; };
+		187078F921F6C5EB00EED8B5 /* UILabel+NSDQuickCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+NSDQuickCoding.m"; sourceTree = "<group>"; };
+		187078FB21F6C5EB00EED8B5 /* NSDDataExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDDataExtend.h; sourceTree = "<group>"; };
+		187078FF21F6C5EB00EED8B5 /* NSDKeychainAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDKeychainAccess.h; sourceTree = "<group>"; };
+		1870790021F6C5EB00EED8B5 /* NSDKeychainAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDKeychainAccess.m; sourceTree = "<group>"; };
+		1AE04C9C769CBA312834A506 /* libPods-NSDExtendTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NSDExtendTools.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		289D4D704984A7917287023B /* Pods-NSDExtendTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSDExtendTools.release.xcconfig"; path = "Target Support Files/Pods-NSDExtendTools/Pods-NSDExtendTools.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,15 +72,68 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7489AAF2A2949FD985A1761 /* libPods-NSDExtendTools.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09D8CF253C7B52F580ED88F5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1012D10ABF5EC71F8812A9B8 /* Pods-NSDExtendTools.debug.xcconfig */,
+				289D4D704984A7917287023B /* Pods-NSDExtendTools.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		1856446421F705B1008883D8 /* NSDUIKitSubclass */ = {
+			isa = PBXGroup;
+			children = (
+				1856446521F705B1008883D8 /* TextView */,
+			);
+			name = NSDUIKitSubclass;
+			path = ../NSDUIKitSubclass;
+			sourceTree = "<group>";
+		};
+		1856446521F705B1008883D8 /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				1856446621F705B1008883D8 /* NSDTextView.h */,
+				1856446721F705B1008883D8 /* NSDTextView.m */,
+			);
+			path = TextView;
+			sourceTree = "<group>";
+		};
+		1856446921F705C9008883D8 /* NSDProjectBase */ = {
+			isa = PBXGroup;
+			children = (
+				1856446D21F708F0008883D8 /* NSDBaseModel.h */,
+				1856446C21F708F0008883D8 /* NSDBaseModel.m */,
+				1856446F21F708F0008883D8 /* NSDBaseStore.h */,
+				1856447121F708F0008883D8 /* NSDBaseStore.m */,
+				1856446E21F708F0008883D8 /* NSDBaseRequester.h */,
+				1856447021F708F0008883D8 /* NSDBaseRequester.m */,
+			);
+			name = NSDProjectBase;
+			path = ../NSDProjectBase;
+			sourceTree = "<group>";
+		};
+		1856446B21F707E6008883D8 /* NSDSingleton */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSDSingleton;
+			sourceTree = "<group>";
+		};
 		186E066621F1DC4C0013E0F4 = {
 			isa = PBXGroup;
 			children = (
+				1856446921F705C9008883D8 /* NSDProjectBase */,
+				1856446421F705B1008883D8 /* NSDUIKitSubclass */,
+				187078FA21F6C5EB00EED8B5 /* NSDDataExtend */,
+				187078EA21F6C5EB00EED8B5 /* NSDUIKitCategory */,
 				186E067221F1DC4C0013E0F4 /* AppDelegate.h */,
 				186E067321F1DC4C0013E0F4 /* AppDelegate.m */,
 				186E067821F1DC4C0013E0F4 /* Main.storyboard */,
@@ -51,6 +143,8 @@
 				186E068121F1DC4D0013E0F4 /* main.m */,
 				186E067121F1DC4C0013E0F4 /* UIKitCategoryDemo */,
 				186E067021F1DC4C0013E0F4 /* Products */,
+				09D8CF253C7B52F580ED88F5 /* Pods */,
+				65B1A2DAF48D76355E2C4250 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +165,71 @@
 			path = UIKitCategoryDemo;
 			sourceTree = "<group>";
 		};
+		187078EA21F6C5EB00EED8B5 /* NSDUIKitCategory */ = {
+			isa = PBXGroup;
+			children = (
+				187078F121F6C5EB00EED8B5 /* NSDUIKitCategory.h */,
+				1870790D21F6C76000EED8B5 /* DataCategory */,
+				1870790C21F6C5FE00EED8B5 /* ViewCategory */,
+			);
+			name = NSDUIKitCategory;
+			path = ../NSDUIKitCategory;
+			sourceTree = "<group>";
+		};
+		187078FA21F6C5EB00EED8B5 /* NSDDataExtend */ = {
+			isa = PBXGroup;
+			children = (
+				1856446B21F707E6008883D8 /* NSDSingleton */,
+				187078FB21F6C5EB00EED8B5 /* NSDDataExtend.h */,
+				187078FE21F6C5EB00EED8B5 /* NSDKeychainAccess */,
+			);
+			name = NSDDataExtend;
+			path = ../NSDDataExtend;
+			sourceTree = "<group>";
+		};
+		187078FE21F6C5EB00EED8B5 /* NSDKeychainAccess */ = {
+			isa = PBXGroup;
+			children = (
+				187078FF21F6C5EB00EED8B5 /* NSDKeychainAccess.h */,
+				1870790021F6C5EB00EED8B5 /* NSDKeychainAccess.m */,
+			);
+			path = NSDKeychainAccess;
+			sourceTree = "<group>";
+		};
+		1870790C21F6C5FE00EED8B5 /* ViewCategory */ = {
+			isa = PBXGroup;
+			children = (
+				187078F521F6C5EB00EED8B5 /* UIView+NSDQuickCoding.h */,
+				187078EB21F6C5EB00EED8B5 /* UIView+NSDQuickCoding.m */,
+				187078F621F6C5EB00EED8B5 /* UIImageView+NSDQuickCoding.h */,
+				187078F021F6C5EB00EED8B5 /* UIImageView+NSDQuickCoding.m */,
+				187078F821F6C5EB00EED8B5 /* UIImage+NSDCompress.h */,
+				187078ED21F6C5EB00EED8B5 /* UIImage+NSDCompress.m */,
+				187078F221F6C5EB00EED8B5 /* UILabel+NSDQuickCoding.h */,
+				187078F921F6C5EB00EED8B5 /* UILabel+NSDQuickCoding.m */,
+				187078F421F6C5EB00EED8B5 /* UIButton+NSDQuickCoding.h */,
+				187078EC21F6C5EB00EED8B5 /* UIButton+NSDQuickCoding.m */,
+			);
+			path = ViewCategory;
+			sourceTree = "<group>";
+		};
+		1870790D21F6C76000EED8B5 /* DataCategory */ = {
+			isa = PBXGroup;
+			children = (
+				187078F721F6C5EB00EED8B5 /* NSDictionary+NSDConversion.h */,
+				187078EF21F6C5EB00EED8B5 /* NSDictionary+NSDConversion.m */,
+			);
+			path = DataCategory;
+			sourceTree = "<group>";
+		};
+		65B1A2DAF48D76355E2C4250 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1AE04C9C769CBA312834A506 /* libPods-NSDExtendTools.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,6 +237,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 186E068521F1DC4D0013E0F4 /* Build configuration list for PBXNativeTarget "NSDExtendTools" */;
 			buildPhases = (
+				49CAF95925A0E1DFD18BD7A7 /* [CP] Check Pods Manifest.lock */,
 				186E066B21F1DC4C0013E0F4 /* Sources */,
 				186E066C21F1DC4C0013E0F4 /* Frameworks */,
 				186E066D21F1DC4C0013E0F4 /* Resources */,
@@ -136,13 +296,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		49CAF95925A0E1DFD18BD7A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NSDExtendTools-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		186E066B21F1DC4C0013E0F4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1870790121F6C5EB00EED8B5 /* UIView+NSDQuickCoding.m in Sources */,
+				1870790B21F6C5EB00EED8B5 /* NSDKeychainAccess.m in Sources */,
+				1870790221F6C5EB00EED8B5 /* UIButton+NSDQuickCoding.m in Sources */,
 				186E067721F1DC4C0013E0F4 /* ViewController.m in Sources */,
+				1870790521F6C5EB00EED8B5 /* NSDictionary+NSDConversion.m in Sources */,
+				1870790621F6C5EB00EED8B5 /* UIImageView+NSDQuickCoding.m in Sources */,
+				1856447421F708F0008883D8 /* NSDBaseStore.m in Sources */,
+				1870790321F6C5EB00EED8B5 /* UIImage+NSDCompress.m in Sources */,
+				1856447221F708F0008883D8 /* NSDBaseModel.m in Sources */,
+				1856447321F708F0008883D8 /* NSDBaseRequester.m in Sources */,
 				186E068221F1DC4D0013E0F4 /* main.m in Sources */,
+				1856446821F705B1008883D8 /* NSDTextView.m in Sources */,
+				1870790821F6C5EB00EED8B5 /* UILabel+NSDQuickCoding.m in Sources */,
 				186E067421F1DC4C0013E0F4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,10 +479,11 @@
 		};
 		186E068621F1DC4D0013E0F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1012D10ABF5EC71F8812A9B8 /* Pods-NSDExtendTools.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Demo/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,10 +496,11 @@
 		};
 		186E068721F1DC4D0013E0F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 289D4D704984A7917287023B /* Pods-NSDExtendTools.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Demo/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
