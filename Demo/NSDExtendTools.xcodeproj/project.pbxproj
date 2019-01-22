@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1856446821F705B1008883D8 /* NSDTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856446721F705B1008883D8 /* NSDTextView.m */; };
-		1856447221F708F0008883D8 /* NSDBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856446C21F708F0008883D8 /* NSDBaseModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1856447321F708F0008883D8 /* NSDBaseRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856447021F708F0008883D8 /* NSDBaseRequester.m */; };
-		1856447421F708F0008883D8 /* NSDBaseStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856447121F708F0008883D8 /* NSDBaseStore.m */; };
+		1856448221F72011008883D8 /* NSDBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856447A21F72011008883D8 /* NSDBaseModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1856448321F72011008883D8 /* NSDBaseStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856447B21F72011008883D8 /* NSDBaseStore.m */; };
+		1856448621F72011008883D8 /* NSDBaseRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856448121F72011008883D8 /* NSDBaseRequester.m */; };
 		186E067421F1DC4C0013E0F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E067321F1DC4C0013E0F4 /* AppDelegate.m */; };
 		186E067721F1DC4C0013E0F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E067621F1DC4C0013E0F4 /* ViewController.m */; };
 		186E067A21F1DC4C0013E0F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186E067821F1DC4C0013E0F4 /* Main.storyboard */; };
@@ -31,12 +31,14 @@
 		1012D10ABF5EC71F8812A9B8 /* Pods-NSDExtendTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSDExtendTools.debug.xcconfig"; path = "Target Support Files/Pods-NSDExtendTools/Pods-NSDExtendTools.debug.xcconfig"; sourceTree = "<group>"; };
 		1856446621F705B1008883D8 /* NSDTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDTextView.h; sourceTree = "<group>"; };
 		1856446721F705B1008883D8 /* NSDTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDTextView.m; sourceTree = "<group>"; };
-		1856446C21F708F0008883D8 /* NSDBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDBaseModel.m; sourceTree = "<group>"; };
-		1856446D21F708F0008883D8 /* NSDBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDBaseModel.h; sourceTree = "<group>"; };
-		1856446E21F708F0008883D8 /* NSDBaseRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDBaseRequester.h; sourceTree = "<group>"; };
-		1856446F21F708F0008883D8 /* NSDBaseStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDBaseStore.h; sourceTree = "<group>"; };
-		1856447021F708F0008883D8 /* NSDBaseRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDBaseRequester.m; sourceTree = "<group>"; };
-		1856447121F708F0008883D8 /* NSDBaseStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDBaseStore.m; sourceTree = "<group>"; };
+		1856447521F7200A008883D8 /* NSDUIKitSubclass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSDUIKitSubclass.h; sourceTree = "<group>"; };
+		1856447821F72011008883D8 /* NSDBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDBaseModel.h; sourceTree = "<group>"; };
+		1856447921F72011008883D8 /* NSDBaseStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDBaseStore.h; sourceTree = "<group>"; };
+		1856447A21F72011008883D8 /* NSDBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDBaseModel.m; sourceTree = "<group>"; };
+		1856447B21F72011008883D8 /* NSDBaseStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDBaseStore.m; sourceTree = "<group>"; };
+		1856447C21F72011008883D8 /* NSDProjectBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDProjectBase.h; sourceTree = "<group>"; };
+		1856448021F72011008883D8 /* NSDBaseRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDBaseRequester.h; sourceTree = "<group>"; };
+		1856448121F72011008883D8 /* NSDBaseRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDBaseRequester.m; sourceTree = "<group>"; };
 		186E066F21F1DC4C0013E0F4 /* NSDExtendTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSDExtendTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		186E067221F1DC4C0013E0F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		186E067321F1DC4C0013E0F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		1856446421F705B1008883D8 /* NSDUIKitSubclass */ = {
 			isa = PBXGroup;
 			children = (
+				1856447521F7200A008883D8 /* NSDUIKitSubclass.h */,
 				1856446521F705B1008883D8 /* TextView */,
 			);
 			name = NSDUIKitSubclass;
@@ -106,20 +109,6 @@
 			path = TextView;
 			sourceTree = "<group>";
 		};
-		1856446921F705C9008883D8 /* NSDProjectBase */ = {
-			isa = PBXGroup;
-			children = (
-				1856446D21F708F0008883D8 /* NSDBaseModel.h */,
-				1856446C21F708F0008883D8 /* NSDBaseModel.m */,
-				1856446F21F708F0008883D8 /* NSDBaseStore.h */,
-				1856447121F708F0008883D8 /* NSDBaseStore.m */,
-				1856446E21F708F0008883D8 /* NSDBaseRequester.h */,
-				1856447021F708F0008883D8 /* NSDBaseRequester.m */,
-			);
-			name = NSDProjectBase;
-			path = ../NSDProjectBase;
-			sourceTree = "<group>";
-		};
 		1856446B21F707E6008883D8 /* NSDSingleton */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,10 +116,41 @@
 			path = NSDSingleton;
 			sourceTree = "<group>";
 		};
+		1856447621F72011008883D8 /* NSDProjectBase */ = {
+			isa = PBXGroup;
+			children = (
+				1856447C21F72011008883D8 /* NSDProjectBase.h */,
+				1856447721F72011008883D8 /* DataBase */,
+				1856447F21F72011008883D8 /* HttpBase */,
+			);
+			name = NSDProjectBase;
+			path = ../NSDProjectBase;
+			sourceTree = "<group>";
+		};
+		1856447721F72011008883D8 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				1856447821F72011008883D8 /* NSDBaseModel.h */,
+				1856447A21F72011008883D8 /* NSDBaseModel.m */,
+				1856447921F72011008883D8 /* NSDBaseStore.h */,
+				1856447B21F72011008883D8 /* NSDBaseStore.m */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		1856447F21F72011008883D8 /* HttpBase */ = {
+			isa = PBXGroup;
+			children = (
+				1856448021F72011008883D8 /* NSDBaseRequester.h */,
+				1856448121F72011008883D8 /* NSDBaseRequester.m */,
+			);
+			path = HttpBase;
+			sourceTree = "<group>";
+		};
 		186E066621F1DC4C0013E0F4 = {
 			isa = PBXGroup;
 			children = (
-				1856446921F705C9008883D8 /* NSDProjectBase */,
+				1856447621F72011008883D8 /* NSDProjectBase */,
 				1856446421F705B1008883D8 /* NSDUIKitSubclass */,
 				187078FA21F6C5EB00EED8B5 /* NSDDataExtend */,
 				187078EA21F6C5EB00EED8B5 /* NSDUIKitCategory */,
@@ -330,12 +350,12 @@
 				1870790B21F6C5EB00EED8B5 /* NSDKeychainAccess.m in Sources */,
 				1870790221F6C5EB00EED8B5 /* UIButton+NSDQuickCoding.m in Sources */,
 				186E067721F1DC4C0013E0F4 /* ViewController.m in Sources */,
+				1856448321F72011008883D8 /* NSDBaseStore.m in Sources */,
+				1856448621F72011008883D8 /* NSDBaseRequester.m in Sources */,
 				1870790521F6C5EB00EED8B5 /* NSDictionary+NSDConversion.m in Sources */,
 				1870790621F6C5EB00EED8B5 /* UIImageView+NSDQuickCoding.m in Sources */,
-				1856447421F708F0008883D8 /* NSDBaseStore.m in Sources */,
+				1856448221F72011008883D8 /* NSDBaseModel.m in Sources */,
 				1870790321F6C5EB00EED8B5 /* UIImage+NSDCompress.m in Sources */,
-				1856447221F708F0008883D8 /* NSDBaseModel.m in Sources */,
-				1856447321F708F0008883D8 /* NSDBaseRequester.m in Sources */,
 				186E068221F1DC4D0013E0F4 /* main.m in Sources */,
 				1856446821F705B1008883D8 /* NSDTextView.m in Sources */,
 				1870790821F6C5EB00EED8B5 /* UILabel+NSDQuickCoding.m in Sources */,

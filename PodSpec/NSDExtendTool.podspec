@@ -111,6 +111,11 @@ Pod::Spec.new do |s|
       sss.public_header_files = 'NSDDataExtend/NSDKeychainAccess/*.h'
     end
   end
+
+  s.subspec 'NSDUIKitCategory' do |ss|
+    ss.public_header_files = 'NSDUIKitCategory/*.h'
+    ss.source_files = 'NSDUIKitCategory/*.{h,m}'
+  end
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
