@@ -11,5 +11,7 @@
 
 #import "NSDUIKitCategory.h"
 #import "NSDDataExtend.h"
+#import "NSDProjectBase.h"
+#import "NSDUIKitSubclass.h"
 
 #endif /* NeeSUIKitCategory_h */

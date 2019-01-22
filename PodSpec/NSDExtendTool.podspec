@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "NSDExtendTool"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "日常开发归纳"
 
   # This description is used to generate tags and improve search results.
@@ -96,25 +96,62 @@ Pod::Spec.new do |s|
   s.source_files  = "NSDExtendTool.h"
 
   
-
+  #NSDUIKitCategory
   s.subspec 'NSDUIKitCategory' do |ss|
-    ss.public_header_files = 'NSDUIKitCategory/*.h'
-    ss.source_files = 'NSDUIKitCategory/*.{h,m}'
+    ss.public_header_files = 'NSDUIKitCategory/NSDUIKitCategory.h'
+    ss.source_files = 'NSDUIKitCategory/NSDUIKitCategory.h'
+
+    ss.subspec 'DataCategory' do |sss|
+      sss.source_files = 'NSDProjectBase/DataCategory/*.{h,m}'
+      sss.public_header_files = 'DataCategory/DataBase/*.h'
+    end
+
+    ss.subspec 'ViewCategory' do |sss|
+      sss.source_files = 'NSDProjectBase/ViewCategory/*.{h,m}'
+      sss.public_header_files = 'NSDProjectBase/ViewCategory/*.h'
+    end
   end
 
+  #NSDDataExtend
   s.subspec 'NSDDataExtend' do |ss|
     ss.public_header_files = 'NSDDataExtend/NSDDataExtend.h'
     ss.source_files = 'NSDDataExtend/NSDDataExtend.h'
 
-    ss.subspec 'NSDKeychainAccess' do |sss|
-      sss.source_files = 'NSDDataExtend/NSDKeychainAccess/*.{h,m}'
-      sss.public_header_files = 'NSDDataExtend/NSDKeychainAccess/*.h'
+    ss.subspec 'KeychainAccess' do |sss|
+      sss.source_files = 'NSDDataExtend/KeychainAccess/*.{h,m}'
+      sss.public_header_files = 'NSDDataExtend/KeychainAccess/*.h'
     end
   end
 
-  s.subspec 'NSDUIKitCategory' do |ss|
-    ss.public_header_files = 'NSDUIKitCategory/*.h'
-    ss.source_files = 'NSDUIKitCategory/*.{h,m}'
+  #NSDProjectBase
+  s.subspec 'NSDProjectBase' do |ss|
+    ss.public_header_files = 'NSDProjectBase/NSDProjectBase.h'
+    ss.source_files = 'NSDProjectBase/NSDProjectBase.h'
+
+
+    ss.dependency "AFNetworking", "~> 3.2.1"  #工程依赖的第三方库
+    ss.dependency "JSONModel", "~> 1.8.0"  #工程依赖的第三方库
+
+    ss.subspec 'DataBase' do |sss|
+      sss.source_files = 'NSDProjectBase/DataBase/*.{h,m}'
+      sss.public_header_files = 'NSDProjectBase/DataBase/*.h'
+    end
+
+    ss.subspec 'HttpBase' do |sss|
+      sss.source_files = 'NSDProjectBase/HttpBase/*.{h,m}'
+      sss.public_header_files = 'NSDProjectBase/HttpBase/*.h'
+    end
+  end
+
+  #NSDUIKitSubclass
+  s.subspec 'NSDUIKitSubclass' do |ss|
+    ss.public_header_files = 'NSDUIKitSubclass/NSDUIKitSubclass.h'
+    ss.source_files = 'NSDUIKitSubclass/NSDUIKitSubclass.h'
+
+    ss.subspec 'TextView' do |sss|
+      sss.source_files = 'NSDUIKitSubclass/TextView/*.{h,m}'
+      sss.public_header_files = 'NSDUIKitSubclass/TextView/*.h'
+    end
   end
   #s.exclude_files = "Classes/Exclude"
 

@@ -39,6 +39,7 @@
 		1856447C21F72011008883D8 /* NSDProjectBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDProjectBase.h; sourceTree = "<group>"; };
 		1856448021F72011008883D8 /* NSDBaseRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDBaseRequester.h; sourceTree = "<group>"; };
 		1856448121F72011008883D8 /* NSDBaseRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDBaseRequester.m; sourceTree = "<group>"; };
+		1856448721F72248008883D8 /* NSDExtendTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NSDExtendTool.h; path = ../NSDExtendTool.h; sourceTree = "<group>"; };
 		186E066F21F1DC4C0013E0F4 /* NSDExtendTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSDExtendTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		186E067221F1DC4C0013E0F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		186E067321F1DC4C0013E0F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -109,13 +110,6 @@
 			path = TextView;
 			sourceTree = "<group>";
 		};
-		1856446B21F707E6008883D8 /* NSDSingleton */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NSDSingleton;
-			sourceTree = "<group>";
-		};
 		1856447621F72011008883D8 /* NSDProjectBase */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +144,7 @@
 		186E066621F1DC4C0013E0F4 = {
 			isa = PBXGroup;
 			children = (
+				1856448721F72248008883D8 /* NSDExtendTool.h */,
 				1856447621F72011008883D8 /* NSDProjectBase */,
 				1856446421F705B1008883D8 /* NSDUIKitSubclass */,
 				187078FA21F6C5EB00EED8B5 /* NSDDataExtend */,
@@ -199,21 +194,20 @@
 		187078FA21F6C5EB00EED8B5 /* NSDDataExtend */ = {
 			isa = PBXGroup;
 			children = (
-				1856446B21F707E6008883D8 /* NSDSingleton */,
 				187078FB21F6C5EB00EED8B5 /* NSDDataExtend.h */,
-				187078FE21F6C5EB00EED8B5 /* NSDKeychainAccess */,
+				187078FE21F6C5EB00EED8B5 /* KeychainAccess */,
 			);
 			name = NSDDataExtend;
 			path = ../NSDDataExtend;
 			sourceTree = "<group>";
 		};
-		187078FE21F6C5EB00EED8B5 /* NSDKeychainAccess */ = {
+		187078FE21F6C5EB00EED8B5 /* KeychainAccess */ = {
 			isa = PBXGroup;
 			children = (
 				187078FF21F6C5EB00EED8B5 /* NSDKeychainAccess.h */,
 				1870790021F6C5EB00EED8B5 /* NSDKeychainAccess.m */,
 			);
-			path = NSDKeychainAccess;
+			path = KeychainAccess;
 			sourceTree = "<group>";
 		};
 		1870790C21F6C5FE00EED8B5 /* ViewCategory */ = {
