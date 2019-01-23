@@ -15,7 +15,7 @@
 $ gem install cocoapods
 ```
 
-为了用CocoaPods整合NeeSUIKitCategory到您的Xcode工程, 请建立如下的Podfile:
+为了用CocoaPods整合NSDExtendTool到您的Xcode工程, 请建立如下的Podfile:
 
 ```
 source 'https://github.com/CocoaPods/Specs.git'
