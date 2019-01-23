@@ -10,14 +10,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
-/**
- @discussion view的基本配置信息
- */
-@interface NSDViewControllerConfig : NSObject
-
-@end
-
 /**
  @discussion 所有ViewController基类
  */
@@ -138,6 +130,15 @@ NS_ASSUME_NONNULL_BEGIN
  @return 页面名称
  */
 -(NSString *)nsd_GetNavTitle;
+
+
+/**
+ @brief navigationBar背景
+ @discussion nil为默认，@""空字符串为透明
+
+ @return 用于设置navigationBar背景色
+ */
+-(nullable NSString *)nsd_GetNavigationBarBackImageName;
 
 @end
 

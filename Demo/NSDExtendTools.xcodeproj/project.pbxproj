@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18453B5721F8543D007CD41E /* UIAlertController+NSDQuicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 18453B5621F8543D007CD41E /* UIAlertController+NSDQuicker.m */; };
 		1856446821F705B1008883D8 /* NSDTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856446721F705B1008883D8 /* NSDTextView.m */; };
 		186E067421F1DC4C0013E0F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E067321F1DC4C0013E0F4 /* AppDelegate.m */; };
 		186E067721F1DC4C0013E0F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E067621F1DC4C0013E0F4 /* ViewController.m */; };
@@ -31,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		1012D10ABF5EC71F8812A9B8 /* Pods-NSDExtendTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSDExtendTools.debug.xcconfig"; path = "Target Support Files/Pods-NSDExtendTools/Pods-NSDExtendTools.debug.xcconfig"; sourceTree = "<group>"; };
+		18453B5521F8543D007CD41E /* UIAlertController+NSDQuicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+NSDQuicker.h"; sourceTree = "<group>"; };
+		18453B5621F8543D007CD41E /* UIAlertController+NSDQuicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+NSDQuicker.m"; sourceTree = "<group>"; };
 		1856446621F705B1008883D8 /* NSDTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDTextView.h; sourceTree = "<group>"; };
 		1856446721F705B1008883D8 /* NSDTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDTextView.m; sourceTree = "<group>"; };
 		1856447521F7200A008883D8 /* NSDUIKitSubclass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSDUIKitSubclass.h; sourceTree = "<group>"; };
@@ -95,6 +98,15 @@
 				289D4D704984A7917287023B /* Pods-NSDExtendTools.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		18453B5421F85414007CD41E /* ControllerCategpry */ = {
+			isa = PBXGroup;
+			children = (
+				18453B5521F8543D007CD41E /* UIAlertController+NSDQuicker.h */,
+				18453B5621F8543D007CD41E /* UIAlertController+NSDQuicker.m */,
+			);
+			path = ControllerCategpry;
 			sourceTree = "<group>";
 		};
 		1856446421F705B1008883D8 /* NSDUIKitSubclass */ = {
@@ -193,6 +205,7 @@
 				187078F121F6C5EB00EED8B5 /* NSDUIKitCategory.h */,
 				1870790D21F6C76000EED8B5 /* DataCategory */,
 				1870790C21F6C5FE00EED8B5 /* ViewCategory */,
+				18453B5421F85414007CD41E /* ControllerCategpry */,
 			);
 			name = NSDUIKitCategory;
 			path = ../NSDUIKitCategory;
@@ -369,6 +382,7 @@
 				1870790321F6C5EB00EED8B5 /* UIImage+NSDCompress.m in Sources */,
 				186E068221F1DC4D0013E0F4 /* main.m in Sources */,
 				1856446821F705B1008883D8 /* NSDTextView.m in Sources */,
+				18453B5721F8543D007CD41E /* UIAlertController+NSDQuicker.m in Sources */,
 				1870790821F6C5EB00EED8B5 /* UILabel+NSDQuickCoding.m in Sources */,
 				18E45CCB21F82825004A4C28 /* NSDStore.m in Sources */,
 				18E45CC621F8281F004A4C28 /* NSDHttpRequester.m in Sources */,

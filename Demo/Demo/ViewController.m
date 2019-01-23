@@ -18,7 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
 }
 
+- (IBAction)testClicked:(id)sender {
+    [UIAlertController AlertWithTips:@"你好" Tag:self];
+}
 
 @end

@@ -8,32 +8,13 @@
 
 #import "NSDViewController.h"
 
-@interface NSDViewControllerConfig ()
-/**
- @brief navgation背景图
- */
-@property(nonatomic, strong)NSString *navBackImageName;
-@end
-
-@implementation NSDViewControllerConfig
-@end
-
 @interface NSDViewController ()
 {
     /**
      @brief title
      */
     NSString *_navTitle;
-    /**
-     @brief 基本配置信息
-     */
-    NSDViewControllerConfig *_config;
 }
-
-/**
- @brief 引用指针，监听上个页面动态配置信息
- */
-@property(nonatomic, strong)NSDViewControllerConfig *previousConfig;
 @end
 
 @implementation NSDViewController
@@ -64,6 +45,7 @@
 {
     [super viewWillAppear:animated];
     [self nsd_SetStatusBarStyle];
+    [self nsd_SetNavBackgroudWithImageName:[self nsd_GetNavigationBarBackImageName]];
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle
@@ -191,16 +173,19 @@
 
 -(void)nsd_SetNavBackgroudWithImageName:(NSString *)imageName
 {
-    _config.navBackImageName = imageName;
-    
     if (!imageName) {
-        [self.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
         [self.navigationController.navigationBar setShadowImage:nil];
+        [self.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
+    }
+    else if([imageName isEqualToString:@""])
+    {
+        [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
     }
     else
     {
+        [self.navigationController.navigationBar setShadowImage:[UIImage new]];
         [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:imageName] forBarMetrics:UIBarMetricsDefault];
-        [self.navigationController.navigationBar setShadowImage:[UIImage imageNamed:imageName]];
     }
 }
 
@@ -210,26 +195,19 @@
     return _navTitle;
 }
 
+-(NSString *)nsd_GetNavigationBarBackImageName
+{
+    return nil;
+}
+
 #pragma mark - ========== SEL ====================
 -(void)nsd_PopController
 {
-    if(_config.navBackImageName && self.previousConfig.navBackImageName)
-    {
-        if (![_config.navBackImageName isEqualToString:self.previousConfig.navBackImageName]) {
-            [self nsd_SetNavBackItemWithImageName:self.previousConfig.navBackImageName];
-        }
-    }
-    else if(_config.navBackImageName)
-    {
-        [self nsd_SetNavBackgroudWithImageName:nil];
-    }
-    
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void)nsd_PushViewController:(__kindof NSDViewController *)controller
 {
-    controller.previousConfig = _config;
     [self.navigationController pushViewController:controller animated:YES];
 }
 /*
