@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1856446821F705B1008883D8 /* NSDTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856446721F705B1008883D8 /* NSDTextView.m */; };
-		1856448221F72011008883D8 /* NSDBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856447A21F72011008883D8 /* NSDBaseModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1856448321F72011008883D8 /* NSDBaseStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856447B21F72011008883D8 /* NSDBaseStore.m */; };
-		1856448621F72011008883D8 /* NSDBaseRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856448121F72011008883D8 /* NSDBaseRequester.m */; };
 		186E067421F1DC4C0013E0F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E067321F1DC4C0013E0F4 /* AppDelegate.m */; };
 		186E067721F1DC4C0013E0F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E067621F1DC4C0013E0F4 /* ViewController.m */; };
 		186E067A21F1DC4C0013E0F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186E067821F1DC4C0013E0F4 /* Main.storyboard */; };
@@ -24,6 +21,11 @@
 		1870790621F6C5EB00EED8B5 /* UIImageView+NSDQuickCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 187078F021F6C5EB00EED8B5 /* UIImageView+NSDQuickCoding.m */; };
 		1870790821F6C5EB00EED8B5 /* UILabel+NSDQuickCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 187078F921F6C5EB00EED8B5 /* UILabel+NSDQuickCoding.m */; };
 		1870790B21F6C5EB00EED8B5 /* NSDKeychainAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1870790021F6C5EB00EED8B5 /* NSDKeychainAccess.m */; };
+		18E45CC621F8281F004A4C28 /* NSDHttpRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E45CC421F8281F004A4C28 /* NSDHttpRequester.m */; };
+		18E45CCB21F82825004A4C28 /* NSDStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E45CC921F82825004A4C28 /* NSDStore.m */; };
+		18E45CCC21F82825004A4C28 /* NSDModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E45CCA21F82825004A4C28 /* NSDModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		18E45CD121F8283E004A4C28 /* NSDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E45CCD21F8283E004A4C28 /* NSDNavigationController.m */; };
+		18E45CD221F8283E004A4C28 /* NSDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E45CCE21F8283E004A4C28 /* NSDViewController.m */; };
 		F7489AAF2A2949FD985A1761 /* libPods-NSDExtendTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE04C9C769CBA312834A506 /* libPods-NSDExtendTools.a */; };
 /* End PBXBuildFile section */
 
@@ -32,13 +34,7 @@
 		1856446621F705B1008883D8 /* NSDTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDTextView.h; sourceTree = "<group>"; };
 		1856446721F705B1008883D8 /* NSDTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDTextView.m; sourceTree = "<group>"; };
 		1856447521F7200A008883D8 /* NSDUIKitSubclass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSDUIKitSubclass.h; sourceTree = "<group>"; };
-		1856447821F72011008883D8 /* NSDBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDBaseModel.h; sourceTree = "<group>"; };
-		1856447921F72011008883D8 /* NSDBaseStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDBaseStore.h; sourceTree = "<group>"; };
-		1856447A21F72011008883D8 /* NSDBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDBaseModel.m; sourceTree = "<group>"; };
-		1856447B21F72011008883D8 /* NSDBaseStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDBaseStore.m; sourceTree = "<group>"; };
 		1856447C21F72011008883D8 /* NSDProjectBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDProjectBase.h; sourceTree = "<group>"; };
-		1856448021F72011008883D8 /* NSDBaseRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDBaseRequester.h; sourceTree = "<group>"; };
-		1856448121F72011008883D8 /* NSDBaseRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDBaseRequester.m; sourceTree = "<group>"; };
 		1856448721F72248008883D8 /* NSDExtendTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NSDExtendTool.h; path = ../NSDExtendTool.h; sourceTree = "<group>"; };
 		186E066F21F1DC4C0013E0F4 /* NSDExtendTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSDExtendTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		186E067221F1DC4C0013E0F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -66,6 +62,16 @@
 		187078FB21F6C5EB00EED8B5 /* NSDDataExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDDataExtend.h; sourceTree = "<group>"; };
 		187078FF21F6C5EB00EED8B5 /* NSDKeychainAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDKeychainAccess.h; sourceTree = "<group>"; };
 		1870790021F6C5EB00EED8B5 /* NSDKeychainAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDKeychainAccess.m; sourceTree = "<group>"; };
+		18E45CC421F8281F004A4C28 /* NSDHttpRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDHttpRequester.m; sourceTree = "<group>"; };
+		18E45CC521F8281F004A4C28 /* NSDHttpRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDHttpRequester.h; sourceTree = "<group>"; };
+		18E45CC721F82825004A4C28 /* NSDStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDStore.h; sourceTree = "<group>"; };
+		18E45CC821F82825004A4C28 /* NSDModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDModel.h; sourceTree = "<group>"; };
+		18E45CC921F82825004A4C28 /* NSDStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDStore.m; sourceTree = "<group>"; };
+		18E45CCA21F82825004A4C28 /* NSDModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDModel.m; sourceTree = "<group>"; };
+		18E45CCD21F8283E004A4C28 /* NSDNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDNavigationController.m; sourceTree = "<group>"; };
+		18E45CCE21F8283E004A4C28 /* NSDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDViewController.m; sourceTree = "<group>"; };
+		18E45CCF21F8283E004A4C28 /* NSDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDViewController.h; sourceTree = "<group>"; };
+		18E45CD021F8283E004A4C28 /* NSDNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDNavigationController.h; sourceTree = "<group>"; };
 		1AE04C9C769CBA312834A506 /* libPods-NSDExtendTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NSDExtendTools.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		289D4D704984A7917287023B /* Pods-NSDExtendTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSDExtendTools.release.xcconfig"; path = "Target Support Files/Pods-NSDExtendTools/Pods-NSDExtendTools.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				1856447C21F72011008883D8 /* NSDProjectBase.h */,
+				18E45CC321F827A2004A4C28 /* BaseViewController */,
 				1856447721F72011008883D8 /* DataBase */,
 				1856447F21F72011008883D8 /* HttpBase */,
 			);
@@ -124,10 +131,10 @@
 		1856447721F72011008883D8 /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
-				1856447821F72011008883D8 /* NSDBaseModel.h */,
-				1856447A21F72011008883D8 /* NSDBaseModel.m */,
-				1856447921F72011008883D8 /* NSDBaseStore.h */,
-				1856447B21F72011008883D8 /* NSDBaseStore.m */,
+				18E45CC821F82825004A4C28 /* NSDModel.h */,
+				18E45CCA21F82825004A4C28 /* NSDModel.m */,
+				18E45CC721F82825004A4C28 /* NSDStore.h */,
+				18E45CC921F82825004A4C28 /* NSDStore.m */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -135,8 +142,8 @@
 		1856447F21F72011008883D8 /* HttpBase */ = {
 			isa = PBXGroup;
 			children = (
-				1856448021F72011008883D8 /* NSDBaseRequester.h */,
-				1856448121F72011008883D8 /* NSDBaseRequester.m */,
+				18E45CC521F8281F004A4C28 /* NSDHttpRequester.h */,
+				18E45CC421F8281F004A4C28 /* NSDHttpRequester.m */,
 			);
 			path = HttpBase;
 			sourceTree = "<group>";
@@ -234,6 +241,17 @@
 				187078EF21F6C5EB00EED8B5 /* NSDictionary+NSDConversion.m */,
 			);
 			path = DataCategory;
+			sourceTree = "<group>";
+		};
+		18E45CC321F827A2004A4C28 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				18E45CCF21F8283E004A4C28 /* NSDViewController.h */,
+				18E45CCE21F8283E004A4C28 /* NSDViewController.m */,
+				18E45CD021F8283E004A4C28 /* NSDNavigationController.h */,
+				18E45CCD21F8283E004A4C28 /* NSDNavigationController.m */,
+			);
+			path = BaseViewController;
 			sourceTree = "<group>";
 		};
 		65B1A2DAF48D76355E2C4250 /* Frameworks */ = {
@@ -342,17 +360,19 @@
 			files = (
 				1870790121F6C5EB00EED8B5 /* UIView+NSDQuickCoding.m in Sources */,
 				1870790B21F6C5EB00EED8B5 /* NSDKeychainAccess.m in Sources */,
+				18E45CD221F8283E004A4C28 /* NSDViewController.m in Sources */,
 				1870790221F6C5EB00EED8B5 /* UIButton+NSDQuickCoding.m in Sources */,
 				186E067721F1DC4C0013E0F4 /* ViewController.m in Sources */,
-				1856448321F72011008883D8 /* NSDBaseStore.m in Sources */,
-				1856448621F72011008883D8 /* NSDBaseRequester.m in Sources */,
 				1870790521F6C5EB00EED8B5 /* NSDictionary+NSDConversion.m in Sources */,
+				18E45CCC21F82825004A4C28 /* NSDModel.m in Sources */,
 				1870790621F6C5EB00EED8B5 /* UIImageView+NSDQuickCoding.m in Sources */,
-				1856448221F72011008883D8 /* NSDBaseModel.m in Sources */,
 				1870790321F6C5EB00EED8B5 /* UIImage+NSDCompress.m in Sources */,
 				186E068221F1DC4D0013E0F4 /* main.m in Sources */,
 				1856446821F705B1008883D8 /* NSDTextView.m in Sources */,
 				1870790821F6C5EB00EED8B5 /* UILabel+NSDQuickCoding.m in Sources */,
+				18E45CCB21F82825004A4C28 /* NSDStore.m in Sources */,
+				18E45CC621F8281F004A4C28 /* NSDHttpRequester.m in Sources */,
+				18E45CD121F8283E004A4C28 /* NSDNavigationController.m in Sources */,
 				186E067421F1DC4C0013E0F4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,7 +450,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -483,7 +503,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -498,6 +518,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -515,6 +536,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
