@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "NSDExtendTool"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "日常开发归纳"
 
   # This description is used to generate tags and improve search results.
@@ -100,6 +100,11 @@ Pod::Spec.new do |s|
   s.subspec 'NSDUIKitCategory' do |ss|
     ss.public_header_files = 'NSDUIKitCategory/NSDUIKitCategory.h'
     ss.source_files = 'NSDUIKitCategory/NSDUIKitCategory.h'
+
+    ss.subspec 'ControllerCategory' do |sss|
+      sss.source_files = 'NSDUIKitCategory/ControllerCategory/*.{h,m}'
+      sss.public_header_files = 'NSDUIKitCategory/ControllerCategory/*.h'
+    end
 
     ss.subspec 'DataCategory' do |sss|
       sss.source_files = 'NSDUIKitCategory/DataCategory/*.{h,m}'

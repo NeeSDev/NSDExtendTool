@@ -100,13 +100,13 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		18453B5421F85414007CD41E /* ControllerCategpry */ = {
+		18453B5421F85414007CD41E /* ControllerCategory */ = {
 			isa = PBXGroup;
 			children = (
 				18453B5521F8543D007CD41E /* UIAlertController+NSDQuicker.h */,
 				18453B5621F8543D007CD41E /* UIAlertController+NSDQuicker.m */,
 			);
-			path = ControllerCategpry;
+			path = ControllerCategory;
 			sourceTree = "<group>";
 		};
 		1856446421F705B1008883D8 /* NSDUIKitSubclass */ = {
@@ -205,7 +205,7 @@
 				187078F121F6C5EB00EED8B5 /* NSDUIKitCategory.h */,
 				1870790D21F6C76000EED8B5 /* DataCategory */,
 				1870790C21F6C5FE00EED8B5 /* ViewCategory */,
-				18453B5421F85414007CD41E /* ControllerCategpry */,
+				18453B5421F85414007CD41E /* ControllerCategory */,
 			);
 			name = NSDUIKitCategory;
 			path = ../NSDUIKitCategory;
