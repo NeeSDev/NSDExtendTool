@@ -9,9 +9,9 @@
 #ifndef NSDProjectBase_h
 #define NSDProjectBase_h
 
-#import "NSDBaseModel.h"
-#import "NSDBaseStore.h"
-#import "NSDBaseRequester.h"
+#import "NSDModel.h"
+#import "NSDStore.h"
+#import "NSDHttpRequester.h"
 #import "NSDViewController.h"
 #import "NSDNavigationController.h"
 
