@@ -170,7 +170,7 @@
 
 -(instancetype)initWithDictionary:(NSDictionary *)dict error:(NSError **)err
 {
-    self = [super initWithDictionary:dict error:err];
+    [super initWithDictionary:dict error:err];
     [self nsd_SpecialDataHandling:dict];
     return self;
 }
