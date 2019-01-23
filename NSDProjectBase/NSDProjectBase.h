@@ -12,5 +12,7 @@
 #import "NSDBaseModel.h"
 #import "NSDBaseStore.h"
 #import "NSDBaseRequester.h"
+#import "NSDViewController.h"
+#import "NSDNavigationController.h"
 
 #endif /* NSDProjectBase_h */

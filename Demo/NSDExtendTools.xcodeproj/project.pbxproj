@@ -120,7 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				1856447C21F72011008883D8 /* NSDProjectBase.h */,
-				18E45CC321F827A2004A4C28 /* BaseViewController */,
+				18E45CC321F827A2004A4C28 /* ViewController */,
 				1856447721F72011008883D8 /* DataBase */,
 				1856447F21F72011008883D8 /* HttpBase */,
 			);
@@ -243,7 +243,7 @@
 			path = DataCategory;
 			sourceTree = "<group>";
 		};
-		18E45CC321F827A2004A4C28 /* BaseViewController */ = {
+		18E45CC321F827A2004A4C28 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				18E45CCF21F8283E004A4C28 /* NSDViewController.h */,
@@ -251,7 +251,7 @@
 				18E45CD021F8283E004A4C28 /* NSDNavigationController.h */,
 				18E45CCD21F8283E004A4C28 /* NSDNavigationController.m */,
 			);
-			path = BaseViewController;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		65B1A2DAF48D76355E2C4250 /* Frameworks */ = {

@@ -131,6 +131,14 @@ Pod::Spec.new do |s|
     ss.dependency "AFNetworking", "~> 3.2.1"  #工程依赖的第三方库
     ss.dependency "JSONModel", "~> 1.8.0"
 
+    ss.subspec 'ViewController' do |sss|
+      sss.source_files = 'NSDProjectBase/ViewController/*.{h,m}'
+      sss.public_header_files = 'NSDProjectBase/ViewController/*.h'
+
+      sss.requires_arc = false;
+      sss.requires_arc = ['NSDProjectBase/DataBase/NSDStore.m']
+    end
+
     ss.subspec 'DataBase' do |sss|
       sss.source_files = 'NSDProjectBase/DataBase/*.{h,m}'
       sss.public_header_files = 'NSDProjectBase/DataBase/*.h'
