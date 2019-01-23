@@ -11,7 +11,7 @@
 
 @implementation NSDBaseRequester
 
-- (void)nsd_RequestStartWithSuccessBlock:(NSDHttpSccessBlock)successBlock
+- (void)nsd_RequestStartWithSuccessBlock:(NSDHttpSuccessBlock)successBlock
                              FailedBlock:(NSDHttpFailedBlock)failedBlock
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -43,21 +43,24 @@
     }
 }
 
-- (void)nsd_UploadImageWithImageData:(NSData *)data
-                            FileName:(NSString *)fileName
-                             FileKey:(NSString *)fileKey
-                        SuccessBlock:(NSDHttpSccessBlock)successBlock
-                         FailedBlock:(NSDHttpFailedBlock)failedBlock
+- (void)nsd_UploadFileWithFileData:(NSData *)data
+                          FileName:(NSString *)fileName
+                           FileKey:(NSString *)fileKey
+                          FileType:(NSString *)fileType
+                      SuccessBlock:(NSDHttpSuccessBlock)successBlock
+                       FailedBlock:(NSDHttpFailedBlock)failedBlock
 {
     AFHTTPRequestSerializer *requestSerializer = [AFHTTPRequestSerializer serializer];
-    [requestSerializer setValue:@"application/x-www-form-urlencoded; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-    [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    for(NSString *key in self.requestHeader.allKeys)
+    {
+        [requestSerializer setValue:self.requestHeader[key] forHTTPHeaderField:key];
+    }
     
     NSMutableURLRequest *request = [requestSerializer multipartFormRequestWithMethod:@"POST"
                                                                            URLString:self.requestUrl
                                                                           parameters:nil
                                                            constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-                                                               [formData appendPartWithFileData:data name:fileKey fileName:fileName mimeType:@"image/jpg"];
+                                                               [formData appendPartWithFileData:data name:fileKey fileName:fileName mimeType:fileType];
                                                            }error:nil];
     
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
@@ -81,7 +84,7 @@
 
 
 - (void)nsd_RequstSuccessDealWithData:(id  _Nullable)responseObject
-                         SuccessBlock:(NSDHttpSccessBlock)successBlock
+                         SuccessBlock:(NSDHttpSuccessBlock)successBlock
 {
     NSString *responseString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
     
@@ -94,17 +97,17 @@
         
         id resultObject =[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
         
-        if(self.modelclass)
+        if(self.originDataModel)
         {
             if(self.originDataClass == NSDOriginDataClassDictionary) {
-                successBlock([[self.modelclass alloc] initWithDictionary:(NSDictionary *)resultObject error:nil]);
+                successBlock([[self.originDataModel alloc] initWithDictionary:(NSDictionary *)resultObject error:nil]);
             }
             else
             {
                 NSArray *array = (NSArray *)resultObject;
                 NSMutableArray *resultArray = [NSMutableArray new];
                 for (NSDictionary *dic in array) {
-                    [resultArray addObject:[[self.modelclass alloc] initWithDictionary:dic error:nil]];
+                    [resultArray addObject:[[self.originDataModel alloc] initWithDictionary:dic error:nil]];
                 }
                 successBlock(resultArray);
             }

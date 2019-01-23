@@ -14,7 +14,7 @@
 
  @param responseObject 返回数据
  */
-typedef void(^NSDHttpSccessBlock)(id _Nullable responseObject);
+typedef void(^NSDHttpSuccessBlock)(id _Nullable responseObject);
 
 /**
  @brief 通用失败block
@@ -58,7 +58,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  @brief 数据回包对应的解析model 需继承于jsonmodel
  */
-@property (nonatomic,assign) Class _Nullable modelclass;
+@property (nonatomic,assign) Class _Nullable originDataModel;
 /**
  @brief 数据回包类型
  @discussion NSDOriginDataClass 默认为Dictionary
@@ -71,7 +71,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param successBlock 成功回调 SccessBlock
  @param failedBlock 失败回调 FailedBlock
  */
-- (void)nsd_RequestStartWithSuccessBlock:(NSDHttpSccessBlock)successBlock
+- (void)nsd_RequestStartWithSuccessBlock:(NSDHttpSuccessBlock)successBlock
                              FailedBlock:(NSDHttpFailedBlock)failedBlock;
 
 /**
@@ -83,11 +83,12 @@ NS_ASSUME_NONNULL_BEGIN
  @param successBlock 成功回调 SccessBlock
  @param failedBlock 失败回调 FailedBlock
  */
--(void)nsd_UploadImageWithImageData:(NSData *)data
-                           FileName:(NSString *)fileName
-                            FileKey:(NSString *)fileKey
-                       SuccessBlock:(NSDHttpSccessBlock)successBlock
-                        FailedBlock:(NSDHttpFailedBlock)failedBlock;
+-(void)nsd_UploadFileWithFileData:(NSData *)data
+                         FileName:(NSString *)fileName
+                          FileKey:(NSString *)fileKey
+                         FileType:(NSString *)fileType
+                     SuccessBlock:(NSDHttpSuccessBlock)successBlock
+                      FailedBlock:(NSDHttpFailedBlock)failedBlock;
 
 @end
 
