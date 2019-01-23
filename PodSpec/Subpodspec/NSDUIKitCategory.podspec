@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "NSDUIKitCategory"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "UIKit扩展，意在提高coding效率"
 
   # This description is used to generate tags and improve search results.
@@ -95,10 +95,16 @@ Pod::Spec.new do |s|
   s.public_header_files  = "NSDUIKitCategory/NSDUIKitCategory.h"
   s.source_files  = "NSDUIKitCategory/NSDUIKitCategory.h"
 
-  s.subspec 'NSDUIKitCategory' do |ss|
-    ss.public_header_files = 'NSDUIKitCategory/*.h'
-    ss.source_files = 'NSDUIKitCategory/*.{h,m}'
+  s.subspec 'DataCategory' do |ss|
+    ss.source_files = 'NSDUIKitCategory/DataCategory/*.{h,m}'
+    ss.public_header_files = 'NSDUIKitCategory/DataCategory/*.h'
   end
+
+  s.subspec 'ViewCategory' do |ss|
+    ss.source_files = 'NSDUIKitCategory/ViewCategory/*.{h,m}'
+    ss.public_header_files = 'NSDUIKitCategory/ViewCategory/*.h'
+  end
+
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"

@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "NSDExtendTool"
+  s.name         = "NSDProjectBase"
   s.version      = "1.0.2"
-  s.summary      = "日常开发归纳"
+  s.summary      = "根据个人习惯封装"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                  意在便利日常开发，将日常中经常用到的代码块封装归类
+                  个人使用，根据个人习惯封装的底层数据存储、解析、网络数据请求
                    DESC
 
   s.homepage     = "https://github.com/NeeSDev"
@@ -92,69 +92,24 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.public_header_files  = "NSDExtendTool.h"
-  s.source_files  = "NSDExtendTool.h"
+  s.public_header_files  = "NSDProjectBase/NSDProjectBase.h"
+  s.source_files  = "NSDProjectBase/NSDProjectBase.h"
 
-  
-  #NSDUIKitCategory
-  s.subspec 'NSDUIKitCategory' do |ss|
-    ss.public_header_files = 'NSDUIKitCategory/NSDUIKitCategory.h'
-    ss.source_files = 'NSDUIKitCategory/NSDUIKitCategory.h'
+  s.subspec 'DataBase' do |ss|
+    ss.source_files = 'NSDProjectBase/DataBase/*.{h,m}'
+    ss.public_header_files = 'NSDProjectBase/DataBase/*.h'
 
-    ss.subspec 'DataCategory' do |sss|
-      sss.source_files = 'NSDUIKitCategory/DataCategory/*.{h,m}'
-      sss.public_header_files = 'NSDUIKitCategory/DataCategory/*.h'
-    end
-
-    ss.subspec 'ViewCategory' do |sss|
-      sss.source_files = 'NSDUIKitCategory/ViewCategory/*.{h,m}'
-      sss.public_header_files = 'NSDUIKitCategory/ViewCategory/*.h'
-    end
+    ss.requires_arc = false;
+    ss.requires_arc = ['NSDProjectBase/DataBase/NSDBaseStore.m']
   end
 
-  #NSDDataExtend
-  s.subspec 'NSDDataExtend' do |ss|
-    ss.public_header_files = 'NSDDataExtend/NSDDataExtend.h'
-    ss.source_files = 'NSDDataExtend/NSDDataExtend.h'
-
-    ss.subspec 'KeychainAccess' do |sss|
-      sss.source_files = 'NSDDataExtend/KeychainAccess/*.{h,m}'
-      sss.public_header_files = 'NSDDataExtend/KeychainAccess/*.h'
-    end
+  s.subspec 'HttpBase' do |ss|
+    ss.source_files = 'NSDProjectBase/HttpBase/*.{h,m}'
+    ss.public_header_files = 'NSDProjectBase/HttpBase/*.h'
   end
 
-  #NSDProjectBase
-  s.subspec 'NSDProjectBase' do |ss|
-    ss.public_header_files = 'NSDProjectBase/NSDProjectBase.h'
-    ss.source_files = 'NSDProjectBase/NSDProjectBase.h'  #工程依赖的第三方库
-    
-    ss.dependency "AFNetworking", "~> 3.2.1"  #工程依赖的第三方库
-    ss.dependency "JSONModel", "~> 1.8.0"
-
-    ss.subspec 'DataBase' do |sss|
-      sss.source_files = 'NSDProjectBase/DataBase/*.{h,m}'
-      sss.public_header_files = 'NSDProjectBase/DataBase/*.h'
-
-      sss.requires_arc = false;
-      sss.requires_arc = ['NSDProjectBase/DataBase/NSDBaseStore.m']
-    end
-
-    ss.subspec 'HttpBase' do |sss|
-      sss.source_files = 'NSDProjectBase/HttpBase/*.{h,m}'
-      sss.public_header_files = 'NSDProjectBase/HttpBase/*.h'
-    end
-  end
-
-  #NSDUIKitSubclass
-  s.subspec 'NSDUIKitSubclass' do |ss|
-    ss.public_header_files = 'NSDUIKitSubclass/NSDUIKitSubclass.h'
-    ss.source_files = 'NSDUIKitSubclass/NSDUIKitSubclass.h'
-
-    ss.subspec 'TextView' do |sss|
-      sss.source_files = 'NSDUIKitSubclass/TextView/*.{h,m}'
-      sss.public_header_files = 'NSDUIKitSubclass/TextView/*.h'
-    end
-  end
+  s.dependency "AFNetworking", "~> 3.2.1"  #工程依赖的第三方库
+  s.dependency "JSONModel", "~> 1.8.0"
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -193,7 +148,7 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # s.requires_arc = true
+  s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
