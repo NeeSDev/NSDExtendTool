@@ -6,10 +6,10 @@
 //  Copyright (c) 2015年 黄定坤. All rights reserved.
 //
 
-#import "NSDBaseModel.h"
+#import "NSDModel.h"
 #include <objc/runtime.h>
 
-@implementation NSDBaseModel
+@implementation NSDModel
 
 -(id)init {
     self = [super init];
@@ -178,7 +178,7 @@
 + (instancetype)nsd_GetModelWithDictionary:(NSDictionary *)dictionary
 {
     NSError *error = nil;
-    NSDBaseModel *model = [[self alloc] initWithDictionary:dictionary error:&error];
+    NSDModel *model = [[self alloc] initWithDictionary:dictionary error:&error];
     if (error) {
         return [self new];
     }

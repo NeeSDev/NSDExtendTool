@@ -6,7 +6,7 @@
 //  Copyright © 2015年 gullmei. All rights reserved.
 //
 
-#import "NSDBaseModel.h"
+#import "NSDModel.h"
 
 /**
  @discussion 本地存储基类
@@ -14,7 +14,7 @@
  @discussion 若不需要区分账户，每次设置同一标识即可
  @discussion 使用本地序列化存储方式
  */
-@interface NSDBaseStore : NSDBaseModel
+@interface NSDStore : NSDModel
 /**
  @brief 当前数据
  */

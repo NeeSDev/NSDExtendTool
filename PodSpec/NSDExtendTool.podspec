@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "NSDExtendTool"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "日常开发归纳"
 
   # This description is used to generate tags and improve search results.
@@ -136,7 +136,7 @@ Pod::Spec.new do |s|
       sss.public_header_files = 'NSDProjectBase/DataBase/*.h'
 
       sss.requires_arc = false;
-      sss.requires_arc = ['NSDProjectBase/DataBase/NSDBaseStore.m']
+      sss.requires_arc = ['NSDProjectBase/DataBase/NSDStore.m']
     end
 
     ss.subspec 'HttpBase' do |sss|

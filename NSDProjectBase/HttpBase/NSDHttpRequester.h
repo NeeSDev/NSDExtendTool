@@ -37,7 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  @discussion http网络请求基类
  */
-@interface NSDBaseRequester : NSObject
+@interface NSDHttpRequester : NSObject
 
 /**
  @brief 请求地址
@@ -58,7 +58,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  @brief 数据回包对应的解析model 需继承于jsonmodel
  */
-@property (nonatomic,assign) Class _Nullable originDataModel;
+@property (nonatomic,assign,nullable) Class originDataModel;
 /**
  @brief 数据回包类型
  @discussion NSDOriginDataClass 默认为Dictionary

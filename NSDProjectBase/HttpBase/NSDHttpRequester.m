@@ -6,10 +6,10 @@
 //  Copyright © 2018 Nee. All rights reserved.
 //
 
-#import "NSDBaseRequester.h"
+#import "NSDHttpRequester.h"
 #import <AFNetworking/AFHTTPSessionManager.h>
 
-@implementation NSDBaseRequester
+@implementation NSDHttpRequester
 
 - (void)nsd_RequestStartWithSuccessBlock:(NSDHttpSuccessBlock)successBlock
                              FailedBlock:(NSDHttpFailedBlock)failedBlock

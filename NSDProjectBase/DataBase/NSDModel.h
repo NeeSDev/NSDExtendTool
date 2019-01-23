@@ -12,7 +12,7 @@
  @discussion 数据解析基类
  @discussion 对JSONModel二次封装
  */
-@interface NSDBaseModel : JSONModel<NSCoding>
+@interface NSDModel : JSONModel<NSCoding>
 /**
  @brief 对象的初始化
 

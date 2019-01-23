@@ -6,13 +6,13 @@
 //  Copyright © 2015年 gullmei. All rights reserved.
 //
 
-#import "NSDBaseStore.h"
+#import "NSDStore.h"
 #include <objc/runtime.h>
 
 #define  ALL_DATA_CACHE       @"all_data_cache.txt"
 #define  DATA_IDENTIFY_CACHE      @"data_identify_cache.txt"
 
-@interface NSDBaseStore ()
+@interface NSDStore ()
 
 /**
  @brief 当前数据标识
@@ -27,7 +27,7 @@
 
 @end
 
-@implementation NSDBaseStore
+@implementation NSDStore
 
 + (instancetype)nsd_SharedInstance {
     static id instance = nil;
@@ -121,7 +121,7 @@
 - (NSString * )nsd_CreateFilePathWithName:(NSString *)name
 {
     NSFileManager * manager = [NSFileManager defaultManager];
-    NSString * pre = [NSDBaseStore documentPath];
+    NSString * pre = [NSDStore documentPath];
     NSString * fullPath = [NSString stringWithFormat:@"%@/contents/",pre];
     
     BOOL dir = 1;
