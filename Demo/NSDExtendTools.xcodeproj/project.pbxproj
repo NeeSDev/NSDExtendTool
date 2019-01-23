@@ -163,7 +163,7 @@
 				186E067D21F1DC4D0013E0F4 /* LaunchScreen.storyboard */,
 				186E068021F1DC4D0013E0F4 /* Info.plist */,
 				186E068121F1DC4D0013E0F4 /* main.m */,
-				186E067121F1DC4C0013E0F4 /* UIKitCategoryDemo */,
+				186E067121F1DC4C0013E0F4 /* Demo */,
 				186E067021F1DC4C0013E0F4 /* Products */,
 				09D8CF253C7B52F580ED88F5 /* Pods */,
 				65B1A2DAF48D76355E2C4250 /* Frameworks */,
@@ -178,13 +178,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		186E067121F1DC4C0013E0F4 /* UIKitCategoryDemo */ = {
+		186E067121F1DC4C0013E0F4 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
 				186E067521F1DC4C0013E0F4 /* ViewController.h */,
 				186E067621F1DC4C0013E0F4 /* ViewController.m */,
 			);
-			path = UIKitCategoryDemo;
+			path = Demo;
 			sourceTree = "<group>";
 		};
 		187078EA21F6C5EB00EED8B5 /* NSDUIKitCategory */ = {

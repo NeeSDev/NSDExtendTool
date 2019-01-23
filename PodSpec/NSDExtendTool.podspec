@@ -134,9 +134,6 @@ Pod::Spec.new do |s|
     ss.subspec 'ViewController' do |sss|
       sss.source_files = 'NSDProjectBase/ViewController/*.{h,m}'
       sss.public_header_files = 'NSDProjectBase/ViewController/*.h'
-
-      sss.requires_arc = false;
-      sss.requires_arc = ['NSDProjectBase/DataBase/NSDStore.m']
     end
 
     ss.subspec 'DataBase' do |sss|
