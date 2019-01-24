@@ -17,6 +17,8 @@
 #import "UILabel+NSDQuickCoding.h"
 #import "UIButton+NSDQuickCoding.h"
 #import "UIImageView+NSDQuickCoding.h"
+#import "UITextField+NSDQuicker.h"
+
 #import "UIAlertController+NSDQuicker.h"
 
 #endif /* NeeSUIKitCategory_h */
