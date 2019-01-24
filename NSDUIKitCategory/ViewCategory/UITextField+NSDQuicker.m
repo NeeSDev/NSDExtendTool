@@ -21,8 +21,9 @@
     UIView *view = [UIView new];
     view.backgroundColor = [UIColor clearColor];
     view.frame = CGRectMake(0, 0, space, 0);
-    self.leftView = view;
-    self.leftViewMode = UITextFieldViewModeAlways;
+    textField.leftView = view;
+    textField.leftViewMode = UITextFieldViewModeAlways;
+    return textField;
 }
 
 @end

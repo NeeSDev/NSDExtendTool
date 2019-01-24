@@ -84,6 +84,13 @@ NS_ASSUME_NONNULL_BEGIN
                              Color:(UIColor *)color;
 
 /**
+ @brief 设置导航栏中间title（view类型）
+ 
+ @param view UIView
+ */
+-(void)nsd_SetNavTitleItemWithView:(__kindof UIView *)view;
+
+/**
  @brief 设置导航栏右键（单个text类型）
  
  @param rightText title

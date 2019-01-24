@@ -121,6 +121,11 @@
     _navTitle = [title copy];
 }
 
+-(void)nsd_SetNavTitleItemWithView:(__kindof UIView *)view
+{
+    self.navigationItem.titleView = view;
+}
+
 -(void)nsd_SetNavTitleItemWithImageNamed:(NSString *)imageName
 {
     UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:imageName]];
