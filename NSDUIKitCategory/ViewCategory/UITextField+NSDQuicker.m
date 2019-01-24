@@ -9,8 +9,15 @@
 #import "UITextField+NSDQuicker.h"
 
 @implementation UITextField (NSDQuicker)
--(void)nsd_SetLeftSpace:(float)space
++(instancetype)nsd_GetWithLeftSpace:(float)space
+                      ReturnKeyType:(UIReturnKeyType)returnKeyType
+                           Delegate:(id)delegate
 {
+    UITextField *textField = [UITextField new];
+    textField.returnKeyType = returnKeyType;
+    if (delegate) {
+        textField.delegate = delegate;
+    }
     UIView *view = [UIView new];
     view.backgroundColor = [UIColor clearColor];
     view.frame = CGRectMake(0, 0, space, 0);

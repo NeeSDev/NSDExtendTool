@@ -17,7 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param space 偏移量
  */
--(void)nsd_SetLeftSpace:(float)space;
++(instancetype)nsd_GetWithLeftSpace:(float)space
+                      ReturnKeyType:(UIReturnKeyType)returnKeyType
+                           Delegate:(nullable id)delegate;
 @end
 
 NS_ASSUME_NONNULL_END
