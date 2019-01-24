@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		18453B5721F8543D007CD41E /* UIAlertController+NSDQuicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 18453B5621F8543D007CD41E /* UIAlertController+NSDQuicker.m */; };
 		1856446821F705B1008883D8 /* NSDTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856446721F705B1008883D8 /* NSDTextView.m */; };
+		1861DC7B21F9B3F100588E0A /* UITextField+NSDQuicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861DC7A21F9B3F100588E0A /* UITextField+NSDQuicker.m */; };
 		186E067421F1DC4C0013E0F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E067321F1DC4C0013E0F4 /* AppDelegate.m */; };
 		186E067721F1DC4C0013E0F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E067621F1DC4C0013E0F4 /* ViewController.m */; };
 		186E067A21F1DC4C0013E0F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186E067821F1DC4C0013E0F4 /* Main.storyboard */; };
@@ -39,6 +40,8 @@
 		1856447521F7200A008883D8 /* NSDUIKitSubclass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSDUIKitSubclass.h; sourceTree = "<group>"; };
 		1856447C21F72011008883D8 /* NSDProjectBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDProjectBase.h; sourceTree = "<group>"; };
 		1856448721F72248008883D8 /* NSDExtendTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NSDExtendTool.h; path = ../NSDExtendTool.h; sourceTree = "<group>"; };
+		1861DC7921F9B3F100588E0A /* UITextField+NSDQuicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+NSDQuicker.h"; sourceTree = "<group>"; };
+		1861DC7A21F9B3F100588E0A /* UITextField+NSDQuicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+NSDQuicker.m"; sourceTree = "<group>"; };
 		186E066F21F1DC4C0013E0F4 /* NSDExtendTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSDExtendTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		186E067221F1DC4C0013E0F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		186E067321F1DC4C0013E0F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -235,6 +238,8 @@
 			children = (
 				187078F521F6C5EB00EED8B5 /* UIView+NSDQuickCoding.h */,
 				187078EB21F6C5EB00EED8B5 /* UIView+NSDQuickCoding.m */,
+				1861DC7921F9B3F100588E0A /* UITextField+NSDQuicker.h */,
+				1861DC7A21F9B3F100588E0A /* UITextField+NSDQuicker.m */,
 				187078F621F6C5EB00EED8B5 /* UIImageView+NSDQuickCoding.h */,
 				187078F021F6C5EB00EED8B5 /* UIImageView+NSDQuickCoding.m */,
 				187078F821F6C5EB00EED8B5 /* UIImage+NSDCompress.h */,
@@ -383,6 +388,7 @@
 				186E068221F1DC4D0013E0F4 /* main.m in Sources */,
 				1856446821F705B1008883D8 /* NSDTextView.m in Sources */,
 				18453B5721F8543D007CD41E /* UIAlertController+NSDQuicker.m in Sources */,
+				1861DC7B21F9B3F100588E0A /* UITextField+NSDQuicker.m in Sources */,
 				1870790821F6C5EB00EED8B5 /* UILabel+NSDQuickCoding.m in Sources */,
 				18E45CCB21F82825004A4C28 /* NSDStore.m in Sources */,
 				18E45CC621F8281F004A4C28 /* NSDHttpRequester.m in Sources */,

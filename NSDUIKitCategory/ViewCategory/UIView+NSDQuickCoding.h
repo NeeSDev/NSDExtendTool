@@ -47,6 +47,18 @@ typedef NS_ENUM(NSInteger, NSDQuickViewStatus ) {
  @return <#return value description#>
  */
 -(NSDQuickViewStatus)nsd_IsSuperiew:(UIView *)superview;
+
+/**
+ @brief 快速设置圆角以及边线
+ 
+ @param cornerRadius 圆角
+ @param borderWidth 边线宽
+ @param borderColor 边线颜色
+ @return NSDQuickViewStatus
+ */
+-(NSDQuickViewStatus)nsd_SetCornerRadius:(float)cornerRadius
+                             BorderWidth:(float)borderWidth
+                             borderColor:(UIColor *)borderColor;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -39,4 +39,14 @@
     }
     return NSDQuickViewStatusSuperviewNone;
 }
+
+-(NSDQuickViewStatus)nsd_SetCornerRadius:(float)cornerRadius
+                             BorderWidth:(float)borderWidth
+                             borderColor:(UIColor *)borderColor
+{
+    self.layer.cornerRadius = cornerRadius;
+    self.layer.borderWidth = borderWidth;
+    self.layer.borderColor = borderColor.CGColor;
+    return NSDQuickViewStatusYES;
+}
 @end
