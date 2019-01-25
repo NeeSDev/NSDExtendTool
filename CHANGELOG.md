@@ -2,6 +2,12 @@
 **NSDExtendTool**的所有版本的变更日志都将会在这里记录.
 
 ---
+## [V1.0.6](https://github.com/NeeSDev/NSDExtendTool/tree/1.0.6)(2019/01/25)
+
+#### Introduce
+适配到9.0
+
+---
 ## [V1.0.5](https://github.com/NeeSDev/NSDExtendTool/tree/1.0.5)(2019/01/24)
 
 #### Introduce
