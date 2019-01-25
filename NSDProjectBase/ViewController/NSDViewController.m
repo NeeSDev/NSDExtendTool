@@ -211,6 +211,11 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+-(void)nsd_PopRootController
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 -(void)nsd_PushViewController:(__kindof NSDViewController *)controller
 {
     [self.navigationController pushViewController:controller animated:YES];

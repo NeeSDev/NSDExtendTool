@@ -54,6 +54,11 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)nsd_PopController;
 
 /**
+ @brief 返回root controller
+ */
+-(void)nsd_PopRootController;
+
+/**
  @brief 跳转下一级controller
  @param controller EtahViewController基类
 
