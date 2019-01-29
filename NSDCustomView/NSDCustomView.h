@@ -9,6 +9,7 @@
 #ifndef NSDCustomView_h
 #define NSDCustomView_h
 
-#import "CircleSlideView.h"
+#import "NSDCircleSlideView.h"
+#import "NSDImageTextView.h"
 
 #endif /* NSDCustomView_h */

@@ -11,9 +11,9 @@
 #import "ReactiveObjC.h"
 
 @interface NSDCircleSlideView ()<UIScrollViewDelegate>
-@property (nonatomic, strong) NSArray<__kindof UIView *> *itemArray;
-@property (nonatomic, strong) UIPageControl *pageControl;
-@property (nonatomic, assign) NSInteger currentIndex; ///< 记录的是显示的page，并不是轮播的page（轮播会比显示的多两页）
+@property (nonatomic, strong) NSArray<__kindof UIView *> *nsd_ItemArray;
+@property (nonatomic, strong) UIPageControl *nsd_PageControl;
+@property (nonatomic, assign) NSInteger nsd_CurrentIndex; ///< 记录的是显示的page，并不是轮播的page（轮播会比显示的多两页）
 @end
 
 @implementation NSDCircleSlideView
@@ -46,11 +46,11 @@
         
         tempArchive = [NSKeyedArchiver archivedDataWithRootObject:[viewArray firstObject]];
         [arrayTemp addObject:[NSKeyedUnarchiver unarchiveObjectWithData:tempArchive]];
-        self.itemArray = [arrayTemp mutableCopy];
+        self.nsd_ItemArray = [arrayTemp mutableCopy];
     }
     else
     {
-        self.itemArray = [viewArray mutableCopy];
+        self.nsd_ItemArray = [viewArray mutableCopy];
     }
     
     UIScrollView *scroll = [UIScrollView new];
@@ -66,19 +66,19 @@
     view.myVertMargin = 0;
     [scroll addSubview:view];
     
-    for (UIView *itemView in self.itemArray) {
+    for (UIView *itemView in self.nsd_ItemArray) {
         [view addSubview:itemView];
     }
     
-    NSInteger realCount = (self.itemArray.count > 1)?(self.itemArray.count - 2):1;
+    NSInteger realCount = (self.nsd_ItemArray.count > 1)?(self.nsd_ItemArray.count - 2):1;
     
     if (isShowPage) {
-        self.pageControl = [UIPageControl new];
-        self.pageControl.bottomPos.equalTo(self).offset(20);
-        self.pageControl.centerXPos.equalTo(self);
-        self.pageControl.numberOfPages = realCount;
-        self.pageControl.currentPage = 0;
-        [self addSubview:self.pageControl];
+        self.nsd_PageControl = [UIPageControl new];
+        self.nsd_PageControl.bottomPos.equalTo(self).offset(20);
+        self.nsd_PageControl.centerXPos.equalTo(self);
+        self.nsd_PageControl.numberOfPages = realCount;
+        self.nsd_PageControl.currentPage = 0;
+        [self addSubview:self.nsd_PageControl];
     }
     
     //超过1个view才需要轮播
@@ -89,11 +89,11 @@
         [[RACSignal interval:intervalTime onScheduler:[RACScheduler scheduler]] subscribeNext:^(NSDate * _Nullable x) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 __strong typeof(weakSelf) strongSelf = weakSelf;
-                NSInteger index = strongSelf.currentIndex + 1;
+                NSInteger index = strongSelf.nsd_CurrentIndex + 1;
 
-                if (strongSelf.pageControl) {
-                    strongSelf.currentIndex = index%realCount;
-                    [strongSelf.pageControl setCurrentPage:strongSelf.currentIndex];
+                if (strongSelf.nsd_PageControl) {
+                    strongSelf.nsd_CurrentIndex = index%realCount;
+                    [strongSelf.nsd_PageControl setCurrentPage:strongSelf.nsd_CurrentIndex];
                 }
 
                 [scroll setContentOffset:CGPointMake((index + 1)*CGRectGetWidth(scroll.frame), 0) animated:YES];
@@ -102,7 +102,7 @@
     }
     else
     {
-        self.currentIndex = 0;
+        self.nsd_CurrentIndex = 0;
     }
 }
 
@@ -122,17 +122,17 @@
     float width = CGRectGetWidth(scrollView.frame);
     if (point.x == 0) {
         //scroll的第一张，实际上是最后一张
-        [scrollView setContentOffset:CGPointMake(width * (self.itemArray.count-2), 0) animated:NO];
-        [self.pageControl setCurrentPage:self.itemArray.count - 2 - 1];
+        [scrollView setContentOffset:CGPointMake(width * (self.nsd_ItemArray.count-2), 0) animated:NO];
+        [self.nsd_PageControl setCurrentPage:self.nsd_ItemArray.count - 2 - 1];
     }
-    else if (point.x == width * (self.itemArray.count-1)) {
+    else if (point.x == width * (self.nsd_ItemArray.count-1)) {
         //scroll 的最后一张，实际上是第一张
         [scrollView setContentOffset:CGPointMake(width , 0) animated:NO];
-        [self.pageControl setCurrentPage:0];
+        [self.nsd_PageControl setCurrentPage:0];
     }
     else
     {
-        [self.pageControl setCurrentPage:point.x/width - 1];
+        [self.nsd_PageControl setCurrentPage:point.x/width - 1];
     }
 }
 

@@ -24,6 +24,7 @@
 		1870790821F6C5EB00EED8B5 /* UILabel+NSDQuickCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 187078F921F6C5EB00EED8B5 /* UILabel+NSDQuickCoding.m */; };
 		1870790B21F6C5EB00EED8B5 /* NSDKeychainAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1870790021F6C5EB00EED8B5 /* NSDKeychainAccess.m */; };
 		18E0805E22002B49006C6546 /* NSDCircleSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E0805D22002B49006C6546 /* NSDCircleSlideView.m */; };
+		18E0806522004040006C6546 /* NSDImageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E0806322004040006C6546 /* NSDImageTextView.m */; };
 		18E45CC621F8281F004A4C28 /* NSDHttpRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E45CC421F8281F004A4C28 /* NSDHttpRequester.m */; };
 		18E45CCB21F82825004A4C28 /* NSDStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E45CC921F82825004A4C28 /* NSDStore.m */; };
 		18E45CCC21F82825004A4C28 /* NSDModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E45CCA21F82825004A4C28 /* NSDModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -72,6 +73,8 @@
 		18E0805C22002B49006C6546 /* NSDCircleSlideView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSDCircleSlideView.h; sourceTree = "<group>"; };
 		18E0805D22002B49006C6546 /* NSDCircleSlideView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSDCircleSlideView.m; sourceTree = "<group>"; };
 		18E0805F2200335A006C6546 /* NSDCustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSDCustomView.h; sourceTree = "<group>"; };
+		18E0806322004040006C6546 /* NSDImageTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDImageTextView.m; sourceTree = "<group>"; };
+		18E0806422004040006C6546 /* NSDImageTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDImageTextView.h; sourceTree = "<group>"; };
 		18E45CC421F8281F004A4C28 /* NSDHttpRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDHttpRequester.m; sourceTree = "<group>"; };
 		18E45CC521F8281F004A4C28 /* NSDHttpRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDHttpRequester.h; sourceTree = "<group>"; };
 		18E45CC721F82825004A4C28 /* NSDStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDStore.h; sourceTree = "<group>"; };
@@ -270,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				18E0805F2200335A006C6546 /* NSDCustomView.h */,
+				18E0806222004040006C6546 /* ImageTextView */,
 				18E0806022003362006C6546 /* CircleSlideView */,
 			);
 			name = NSDCustomView;
@@ -283,6 +287,15 @@
 				18E0805D22002B49006C6546 /* NSDCircleSlideView.m */,
 			);
 			path = CircleSlideView;
+			sourceTree = "<group>";
+		};
+		18E0806222004040006C6546 /* ImageTextView */ = {
+			isa = PBXGroup;
+			children = (
+				18E0806422004040006C6546 /* NSDImageTextView.h */,
+				18E0806322004040006C6546 /* NSDImageTextView.m */,
+			);
+			path = ImageTextView;
 			sourceTree = "<group>";
 		};
 		18E45CC321F827A2004A4C28 /* ViewController */ = {
@@ -413,6 +426,7 @@
 				1856446821F705B1008883D8 /* NSDTextView.m in Sources */,
 				18453B5721F8543D007CD41E /* UIAlertController+NSDQuicker.m in Sources */,
 				1861DC7B21F9B3F100588E0A /* UITextField+NSDQuicker.m in Sources */,
+				18E0806522004040006C6546 /* NSDImageTextView.m in Sources */,
 				1870790821F6C5EB00EED8B5 /* UILabel+NSDQuickCoding.m in Sources */,
 				18E45CCB21F82825004A4C28 /* NSDStore.m in Sources */,
 				18E45CC621F8281F004A4C28 /* NSDHttpRequester.m in Sources */,
