@@ -130,15 +130,15 @@ Pod::Spec.new do |s|
 
    #NSDCustomView
   s.subspec 'NSDCustomView' do |ss|
-    ss.public_header_files = 'NSDCustomView/NSDCustomView.h'
-    ss.source_files = 'NSDCustomView/NSDCustomView.h'
+    # ss.public_header_files = 'NSDCustomView/NSDCustomView.h'
+    # ss.source_files = 'NSDCustomView/NSDCustomView.h'
 
       #工程依赖的第三方库
 
-    ss.subspec 'CircleSlideView' do |sss|
-      sss.source_files = 'NSDCustomView/CircleSlideView/*.{h,m}'
-      sss.public_header_files = 'NSDCustomView/CircleSlideView/*.h'
-    end
+    # ss.subspec 'CircleSlideView' do |sss|
+      ss.source_files = 'NSDCustomView/*.{h,m}'
+      ss.public_header_files = 'NSDCustomView/*.h'
+    # end
   end
 
   #NSDProjectBase
