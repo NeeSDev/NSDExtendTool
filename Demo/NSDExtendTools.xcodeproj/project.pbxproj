@@ -23,6 +23,7 @@
 		1870790621F6C5EB00EED8B5 /* UIImageView+NSDQuickCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 187078F021F6C5EB00EED8B5 /* UIImageView+NSDQuickCoding.m */; };
 		1870790821F6C5EB00EED8B5 /* UILabel+NSDQuickCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 187078F921F6C5EB00EED8B5 /* UILabel+NSDQuickCoding.m */; };
 		1870790B21F6C5EB00EED8B5 /* NSDKeychainAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1870790021F6C5EB00EED8B5 /* NSDKeychainAccess.m */; };
+		18E0805E22002B49006C6546 /* CircleSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E0805D22002B49006C6546 /* CircleSlideView.m */; };
 		18E45CC621F8281F004A4C28 /* NSDHttpRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E45CC421F8281F004A4C28 /* NSDHttpRequester.m */; };
 		18E45CCB21F82825004A4C28 /* NSDStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E45CC921F82825004A4C28 /* NSDStore.m */; };
 		18E45CCC21F82825004A4C28 /* NSDModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E45CCA21F82825004A4C28 /* NSDModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -68,6 +69,9 @@
 		187078FB21F6C5EB00EED8B5 /* NSDDataExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDDataExtend.h; sourceTree = "<group>"; };
 		187078FF21F6C5EB00EED8B5 /* NSDKeychainAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDKeychainAccess.h; sourceTree = "<group>"; };
 		1870790021F6C5EB00EED8B5 /* NSDKeychainAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDKeychainAccess.m; sourceTree = "<group>"; };
+		18E0805C22002B49006C6546 /* CircleSlideView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleSlideView.h; sourceTree = "<group>"; };
+		18E0805D22002B49006C6546 /* CircleSlideView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleSlideView.m; sourceTree = "<group>"; };
+		18E0805F2200335A006C6546 /* NSDCustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSDCustomView.h; sourceTree = "<group>"; };
 		18E45CC421F8281F004A4C28 /* NSDHttpRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDHttpRequester.m; sourceTree = "<group>"; };
 		18E45CC521F8281F004A4C28 /* NSDHttpRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDHttpRequester.h; sourceTree = "<group>"; };
 		18E45CC721F82825004A4C28 /* NSDStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDStore.h; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				1856448721F72248008883D8 /* NSDExtendTool.h */,
+				18E0805B22002AEF006C6546 /* NSDCustomView */,
 				1856447621F72011008883D8 /* NSDProjectBase */,
 				1856446421F705B1008883D8 /* NSDUIKitSubclass */,
 				187078FA21F6C5EB00EED8B5 /* NSDDataExtend */,
@@ -259,6 +264,25 @@
 				187078EF21F6C5EB00EED8B5 /* NSDictionary+NSDConversion.m */,
 			);
 			path = DataCategory;
+			sourceTree = "<group>";
+		};
+		18E0805B22002AEF006C6546 /* NSDCustomView */ = {
+			isa = PBXGroup;
+			children = (
+				18E0805F2200335A006C6546 /* NSDCustomView.h */,
+				18E0806022003362006C6546 /* CircleSlideView */,
+			);
+			name = NSDCustomView;
+			path = ../NSDCustomView;
+			sourceTree = "<group>";
+		};
+		18E0806022003362006C6546 /* CircleSlideView */ = {
+			isa = PBXGroup;
+			children = (
+				18E0805C22002B49006C6546 /* CircleSlideView.h */,
+				18E0805D22002B49006C6546 /* CircleSlideView.m */,
+			);
+			path = CircleSlideView;
 			sourceTree = "<group>";
 		};
 		18E45CC321F827A2004A4C28 /* ViewController */ = {
@@ -393,6 +417,7 @@
 				18E45CCB21F82825004A4C28 /* NSDStore.m in Sources */,
 				18E45CC621F8281F004A4C28 /* NSDHttpRequester.m in Sources */,
 				18E45CD121F8283E004A4C28 /* NSDNavigationController.m in Sources */,
+				18E0805E22002B49006C6546 /* CircleSlideView.m in Sources */,
 				186E067421F1DC4C0013E0F4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

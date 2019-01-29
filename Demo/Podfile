@@ -8,5 +8,7 @@ target 'NSDExtendTools' do
   # Pods for NSDExtendTools
 	pod 'AFNetworking', '~> 3.2.1'
   pod 'JSONModel', '~> 1.8.0'
-
+  pod 'JSONModel', '~> 1.8.0'
+  pod 'ReactiveObjC', '~> 3.1.0'
+  pod 'MyLayout', '~> 1.6.1'
 end

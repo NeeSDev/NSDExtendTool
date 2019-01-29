@@ -21,8 +21,4 @@
     
 }
 
-- (IBAction)testClicked:(id)sender {
-    [UIAlertController AlertWithTips:@"你好" Tag:self];
-}
-
 @end

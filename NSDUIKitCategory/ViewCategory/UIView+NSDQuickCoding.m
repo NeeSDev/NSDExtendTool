@@ -7,6 +7,7 @@
 //
 
 #import "UIView+NSDQuickCoding.h"
+#import "MyLayout.h"
 
 @implementation UIView (NSDQuickCoding)
 
@@ -47,6 +48,26 @@
     self.layer.cornerRadius = cornerRadius;
     self.layer.borderWidth = borderWidth;
     self.layer.borderColor = borderColor.CGColor;
+    return NSDQuickViewStatusYES;
+}
+
+-(NSDQuickViewStatus)nsd_SetBottomLineWithWidth:(float)width
+                                     LineLength:(float)lineLength
+                                      LineColor:(UIColor*)lineColor
+{
+    MyBaseLayout *lineView = [MyBaseLayout new];
+    lineView.backgroundColor = lineColor;
+    lineView.myHeight = width;
+    lineView.centerXPos.equalTo(self);
+    if (lineLength == 0) {
+        lineView.myHorzMargin = 0;
+    }
+    else
+    {
+        lineView.myWidth = lineLength;
+    }
+    lineView.myBottom = 0;
+    [self addSubview:lineView];
     return NSDQuickViewStatusYES;
 }
 @end

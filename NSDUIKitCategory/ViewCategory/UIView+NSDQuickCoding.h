@@ -44,7 +44,7 @@ typedef NS_ENUM(NSInteger, NSDQuickViewStatus ) {
  @brief 是否是superview
 
  @param superview 父视图
- @return <#return value description#>
+ @return NSDQuickViewStatus
  */
 -(NSDQuickViewStatus)nsd_IsSuperiew:(UIView *)superview;
 
@@ -59,6 +59,18 @@ typedef NS_ENUM(NSInteger, NSDQuickViewStatus ) {
 -(NSDQuickViewStatus)nsd_SetCornerRadius:(float)cornerRadius
                              BorderWidth:(float)borderWidth
                              borderColor:(UIColor *)borderColor;
+
+/**
+ @brief 快速设置圆角以及边线
+ 
+ @param width 宽度
+ @param lineLength 长度，0默认和自己一样长
+ @param lineColor 边线颜色
+ @return NSDQuickViewStatus
+ */
+-(NSDQuickViewStatus)nsd_SetBottomLineWithWidth:(float)width
+                                     LineLength:(float)lineLength
+                                      LineColor:(UIColor*)lineColor;
 @end
 
 NS_ASSUME_NONNULL_END
