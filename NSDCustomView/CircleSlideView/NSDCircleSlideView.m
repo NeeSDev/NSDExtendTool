@@ -77,13 +77,13 @@
         self.nsd_PageControl.bottomPos.equalTo(self).offset(20);
         self.nsd_PageControl.centerXPos.equalTo(self);
         self.nsd_PageControl.numberOfPages = realCount;
-        self.nsd_PageControl.currentPage = 0;
+        self.nsd_PageControl.currentPage = realCount - 1;
         [self addSubview:self.nsd_PageControl];
     }
     
     //超过1个view才需要轮播
     if (realCount > 1) {
-//        [scroll setContentOffset:CGPointMake(CGRectGetWidth(scroll.frame), 0)];
+        self.nsd_CurrentIndex = -1;
         
         __weak typeof(self) weakSelf = self;
         [[RACSignal interval:intervalTime onScheduler:[RACScheduler scheduler]] subscribeNext:^(NSDate * _Nullable x) {
