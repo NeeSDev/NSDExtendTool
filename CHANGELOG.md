@@ -2,6 +2,13 @@
 **NSDExtendTool**的所有版本的变更日志都将会在这里记录.
 
 ---
+## [V1.0.7](https://github.com/NeeSDev/NSDExtendTool/tree/1.0.7)(2019/01/29)
+
+#### Introduce
+NSDCustomView
+    NSDCircleSlideView
+
+---
 ## [V1.0.6](https://github.com/NeeSDev/NSDExtendTool/tree/1.0.6)(2019/01/25)
 
 #### Introduce

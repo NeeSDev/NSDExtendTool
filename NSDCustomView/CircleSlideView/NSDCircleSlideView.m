@@ -6,17 +6,17 @@
 //  Copyright © 2019 NeeSDev. All rights reserved.
 //
 
-#import "CircleSlideView.h"
+#import "NSDCircleSlideView.h"
 #import "MyLayout.h"
 #import "ReactiveObjC.h"
 
-@interface CircleSlideView ()<UIScrollViewDelegate>
+@interface NSDCircleSlideView ()<UIScrollViewDelegate>
 @property (nonatomic, strong) NSArray<__kindof UIView *> *itemArray;
 @property (nonatomic, strong) UIPageControl *pageControl;
 @property (nonatomic, assign) NSInteger currentIndex; ///< 记录的是显示的page，并不是轮播的page（轮播会比显示的多两页）
 @end
 
-@implementation CircleSlideView
+@implementation NSDCircleSlideView
 
 /*
 // Only override drawRect: if you perform custom drawing.

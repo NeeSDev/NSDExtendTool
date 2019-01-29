@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  @discussion 循环播放图片
  */
-@interface CircleSlideView : MyRelativeLayout
+@interface NSDCircleSlideView : MyRelativeLayout
 
 
 /**

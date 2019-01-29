@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "NSDExtendTool"
-  s.version      = "1.0.6"
+  s.version      = "1.0.7"
   s.summary      = "日常开发归纳"
 
   # This description is used to generate tags and improve search results.
@@ -125,6 +125,17 @@ Pod::Spec.new do |s|
     ss.subspec 'KeychainAccess' do |sss|
       sss.source_files = 'NSDDataExtend/KeychainAccess/*.{h,m}'
       sss.public_header_files = 'NSDDataExtend/KeychainAccess/*.h'
+    end
+  end
+
+   #NSDCustomView
+  s.subspec 'NSDCustomView' do |ss|
+    ss.public_header_files = 'NSDCustomView/NSDCustomView.h'
+    ss.source_files = 'NSDCustomView/NSDCustomView.h'
+
+    ss.subspec 'CircleSlideView' do |sss|
+      sss.source_files = 'NSDCustomView/CircleSlideView/*.{h,m}'
+      sss.public_header_files = 'NSDCustomView/CircleSlideView/*.h'
     end
   end
 
