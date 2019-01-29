@@ -9,6 +9,25 @@
 #import "UIButton+NSDQuickCoding.h"
 
 @implementation UIButton (NSDQuickCoding)
++(instancetype)nsd_GetWithTitle:(NSString *)title
+                           Font:(nonnull UIFont *)font
+                          Color:(UIColor *)color;
+{
+    UIButton *btn =[UIButton buttonWithType:UIButtonTypeCustom];
+    btn.titleLabel.font = font;
+    [btn nsd_SetNormalTitle:title];
+    [btn nsd_SetNormalTitleColor:color];
+    [btn setBackgroundColor:[UIColor clearColor]];
+    return btn;
+}
+
++(instancetype)nsd_GetWithBackgroundImageName:(NSString *)backgroundImageName
+{
+    UIButton *btn =[UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setBackgroundColor:[UIColor clearColor]];
+    [btn nsd_SetNormalImageWithImageName:backgroundImageName];
+    return btn;
+}
 
 +(instancetype)nsd_GetWithTarget:(id)target
                           action:(SEL)action
@@ -65,6 +84,7 @@
 -(void)nsd_SetNormalTitle:(NSString *)title
 {
     [self setTitle:title forState:UIControlStateNormal];
+    [self sizeToFit];
 }
 
 -(void)nsd_SetNormalTitleColor:(UIColor *)titleColor

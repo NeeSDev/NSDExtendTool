@@ -15,6 +15,24 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface UIButton (NSDQuickCoding)
 
+/**
+ @brief 快速初始化一个Button(有title)
+ 
+ @param title 标题
+ @param color 颜色
+ @return Button
+ */
++(instancetype)nsd_GetWithTitle:(NSString *)title
+                           Font:(UIFont *)font
+                          Color:(UIColor *)color;
+
+/**
+ @brief 快速初始化一个Button
+ 
+ @param backgroundImageName 背景图
+ @return Button
+ */
++(instancetype)nsd_GetWithBackgroundImageName:(NSString *)backgroundImageName;
 
 /**
  @brief 快速初始化一个Button
