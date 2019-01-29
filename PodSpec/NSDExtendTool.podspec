@@ -133,6 +133,8 @@ Pod::Spec.new do |s|
     ss.public_header_files = 'NSDCustomView/NSDCustomView.h'
     ss.source_files = 'NSDCustomView/NSDCustomView.h'
 
+      #工程依赖的第三方库
+
     ss.subspec 'CircleSlideView' do |sss|
       sss.source_files = 'NSDCustomView/CircleSlideView/*.{h,m}'
       sss.public_header_files = 'NSDCustomView/CircleSlideView/*.h'
@@ -144,8 +146,7 @@ Pod::Spec.new do |s|
     ss.public_header_files = 'NSDProjectBase/NSDProjectBase.h'
     ss.source_files = 'NSDProjectBase/NSDProjectBase.h'  #工程依赖的第三方库
     
-    ss.dependency "AFNetworking", "~> 3.2.1"  #工程依赖的第三方库
-    ss.dependency "JSONModel", "~> 1.8.0"
+    
 
     ss.subspec 'ViewController' do |sss|
       sss.source_files = 'NSDProjectBase/ViewController/*.{h,m}'
@@ -176,6 +177,13 @@ Pod::Spec.new do |s|
       sss.public_header_files = 'NSDUIKitSubclass/TextView/*.h'
     end
   end
+
+
+  s.dependency 'ReactiveObjC', '~> 3.1.0'  #工程依赖的第三方库
+  s.dependency 'MyLayout', '~> 1.6.1'
+  s.dependency "AFNetworking", "~> 3.2.1"  #工程依赖的第三方库
+  s.dependency "JSONModel", "~> 1.8.0"
+
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
