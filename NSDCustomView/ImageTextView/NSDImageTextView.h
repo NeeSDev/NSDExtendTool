@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSInteger, NSDImageTextType) {
     NSDImageTextTypeNormal    = 0,///< 常态，Image+Text
     NSDImageTextTypeText      ,   ///< Text+Text
+    NSDImageTextTypeTextImage ,///< Text + Image
 };
 
 

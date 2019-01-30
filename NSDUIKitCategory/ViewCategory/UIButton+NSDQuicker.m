@@ -25,7 +25,15 @@
 {
     UIButton *btn =[UIButton buttonWithType:UIButtonTypeCustom];
     [btn setBackgroundColor:[UIColor clearColor]];
-    [btn nsd_SetNormalImageWithImageName:backgroundImageName];
+    [btn nsd_SetNormalBackgroundImageWithImageName:backgroundImageName];
+    return btn;
+}
+
++(instancetype)nsd_GetWithImageName:(NSString *)imageName
+{
+    UIButton *btn =[UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setBackgroundColor:[UIColor clearColor]];
+    [btn nsd_SetNormalBackgroundImageWithImageName:imageName];
     return btn;
 }
 
@@ -62,7 +70,7 @@
     UIButton *btn =[UIButton nsd_GetWithTarget:target
                                         action:action
                                backgroundColor:[UIColor clearColor]];
-    [btn nsd_SetNormalImageWithImageName:backgroundImageName];
+    [btn nsd_SetNormalBackgroundImageWithImageName:backgroundImageName];
     return btn;
 }
 
@@ -120,19 +128,33 @@
     self.titleLabel.font = font;
 }
 
--(void)nsd_SetNormalImageWithImageName:(NSString *)imageName
+-(void)nsd_SetNormalBackgroundImageWithImageName:(NSString *)imageName
 {
     [self setBackgroundImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
 }
 
--(void)nsd_SetSelectedImageWithImageName:(NSString *)imageName
+-(void)nsd_SetSelectedBackgroundImageWithImageName:(NSString *)imageName
 {
     [self setBackgroundImage:[UIImage imageNamed:imageName] forState:UIControlStateSelected];
 }
 
--(void)nsd_SetHightlightImageWithImageName:(NSString *)imageName
+-(void)nsd_SetHightlightBackgroundImageWithImageName:(NSString *)imageName
 {
     [self setBackgroundImage:[UIImage imageNamed:imageName] forState:UIControlStateHighlighted];
 }
 
+-(void)nsd_SetNormalImageWithImageName:(NSString *)imageName
+{
+    [self setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+}
+
+-(void)nsd_SetSelectedImageWithImageName:(NSString *)imageName
+{
+    [self setImage:[UIImage imageNamed:imageName] forState:UIControlStateSelected];
+}
+
+-(void)nsd_SetHightlightImageWithImageName:(NSString *)imageName
+{
+    [self setImage:[UIImage imageNamed:imageName] forState:UIControlStateHighlighted];
+}
 @end

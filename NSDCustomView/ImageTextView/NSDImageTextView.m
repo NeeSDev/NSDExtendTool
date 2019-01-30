@@ -84,28 +84,47 @@
 {
     NSDImageTextView *layout = [super linearLayoutWithOrientation:orientation];
     layout.gravity = MyGravity_Center;
-    switch (imageTextType) {
-        case NSDImageTextTypeNormal:
-            [layout addSubview:layout.nsd_ImageView];
-            break;
-        case NSDImageTextTypeText:
-            [layout addSubview:layout.nsd_MainLabel];
-            break;
-        default:
-            break;
-    }
     
-    switch (orientation) {
-        case MyOrientation_Horz:
-            layout.nsd_SubLabel.myLeading = 8;
-            break;
-        case MyOrientation_Vert:
-            layout.nsd_SubLabel.myTop = 8;
-            break;
-        default:
-            break;
+    if (imageTextType == NSDImageTextTypeTextImage) {
+        [layout addSubview:layout.nsd_SubLabel];
+        
+        switch (orientation) {
+            case MyOrientation_Horz:
+                layout.nsd_ImageView.myLeading = 8;
+                break;
+            case MyOrientation_Vert:
+                layout.nsd_ImageView.myTop = 8;
+                break;
+            default:
+                break;
+        }
+        [layout addSubview:layout.nsd_ImageView];
     }
-    [layout addSubview:layout.nsd_SubLabel];
+    else
+    {
+        switch (imageTextType) {
+            case NSDImageTextTypeNormal:
+                [layout addSubview:layout.nsd_ImageView];
+                break;
+            case NSDImageTextTypeText:
+                [layout addSubview:layout.nsd_MainLabel];
+                break;
+            default:
+                break;
+        }
+        
+        switch (orientation) {
+            case MyOrientation_Horz:
+                layout.nsd_SubLabel.myLeading = 8;
+                break;
+            case MyOrientation_Vert:
+                layout.nsd_SubLabel.myTop = 8;
+                break;
+            default:
+                break;
+        }
+        [layout addSubview:layout.nsd_SubLabel];
+    }
     layout.nsd_ImageTextStatus = NSDImageTextStatusNormal;
     layout.nsd_IsEnableHighlight = YES;
     return layout;

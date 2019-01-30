@@ -37,6 +37,14 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  @brief 快速初始化一个Button
  
+ @param imageName 图
+ @return Button
+ */
++(instancetype)nsd_GetWithImageName:(NSString *)imageName;
+
+/**
+ @brief 快速初始化一个Button
+ 
  @param target 方法调用对象
  @param action 响应方法
  @param backgroundImageName 背景图
@@ -145,6 +153,28 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)nsd_SetSelectedTitle:(NSString *)title
                        Font:(UIFont *)font
                  TitleColor:(UIColor *)titleColor;
+
+/**
+ @brief 设置一般状态的图片
+ 
+ @param imageName 图片名称
+ */
+-(void)nsd_SetNormalBackgroundImageWithImageName:(NSString *)imageName;
+
+
+/**
+ @brief 设置选中状态的图片
+ 
+ @param imageName 图片名称
+ */
+-(void)nsd_SetSelectedBackgroundImageWithImageName:(NSString *)imageName;
+
+/**
+ @brief 设置高亮时的图片
+ 
+ @param imageName 图片名称
+ */
+-(void)nsd_SetHightlightBackgroundImageWithImageName:(NSString *)imageName;
 
 /**
  @brief 设置一般状态的图片
