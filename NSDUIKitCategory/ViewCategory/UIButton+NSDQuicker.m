@@ -33,7 +33,7 @@
 {
     UIButton *btn =[UIButton buttonWithType:UIButtonTypeCustom];
     [btn setBackgroundColor:[UIColor clearColor]];
-    [btn nsd_SetNormalBackgroundImageWithImageName:imageName];
+    [btn nsd_SetNormalImageWithImageName:imageName];
     return btn;
 }
 
