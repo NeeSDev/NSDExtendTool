@@ -23,7 +23,7 @@ typedef NS_ENUM(NSInteger, NSDQuickViewStatus ) {
     NSDQuickViewStatusSuperviewNone,///< 没有superview
 };
 
-@interface UIView (NSDQuickCoding)
+@interface UIView (NSDQuicker)
 
 #pragma mark - ========== Class Methods ====================
 /**

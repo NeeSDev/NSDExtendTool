@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  @brief UILabel快速coding初始化
  */
-@interface UILabel (NSDQuickCoding)
+@interface UILabel (NSDQuicker)
 
 /**
  @brief 快速初始化一个Label

@@ -6,10 +6,10 @@
 //  Copyright © 2019 apple. All rights reserved.
 //
 
-#import "UIView+NSDQuickCoding.h"
+#import "UIView+NSDQuicker.h"
 #import "MyLayout.h"
 
-@implementation UIView (NSDQuickCoding)
+@implementation UIView (NSDQuicker)
 
 #pragma mark - ========== Class Methods ====================
 +(instancetype)nsd_GetClearColorView

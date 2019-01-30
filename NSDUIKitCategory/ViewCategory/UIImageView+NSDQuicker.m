@@ -6,9 +6,9 @@
 //  Copyright © 2018 Nee. All rights reserved.
 //
 
-#import "UIImageView+NSDQuickCoding.h"
+#import "UIImageView+NSDQuicker.h"
 
-@implementation UIImageView (NSDQuickCoding)
+@implementation UIImageView (NSDQuicker)
 
 +(instancetype)nsd_GetWithImageName:(NSString *)imageName
 {

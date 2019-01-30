@@ -6,9 +6,9 @@
 //  Copyright © 2019 Nee. All rights reserved.
 //
 
-#import "NSDictionary+NSDConversion.h"
+#import "NSDictionary+NSDQuicker.h"
 
-@implementation NSDictionary (CustomFunc)
+@implementation NSDictionary (NSDQuicker)
 
 - (NSString *)nsd_GetString
 {

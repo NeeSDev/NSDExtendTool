@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  @brief UIButton快速coding初始化
  */
-@interface UIButton (NSDQuickCoding)
+@interface UIButton (NSDQuicker)
 
 /**
  @brief 快速初始化一个Button(有title)

@@ -9,16 +9,19 @@
 #ifndef NSDUIKitCategory_h
 #define NSDUIKitCategory_h
 
-
+//data
 #import "UIImage+NSDCompress.h"
-#import "NSDictionary+NSDConversion.h"
+#import "NSDictionary+NSDQuicker.h"
+#import "NSString+NSDQuicker.h"
 
-#import "UIView+NSDQuickCoding.h"
-#import "UILabel+NSDQuickCoding.h"
-#import "UIButton+NSDQuickCoding.h"
-#import "UIImageView+NSDQuickCoding.h"
+//view
+#import "UIView+NSDQuicker.h"
+#import "UILabel+NSDQuicker.h"
+#import "UIButton+NSDQuicker.h"
+#import "UIImageView+NSDQuicker.h"
 #import "UITextField+NSDQuicker.h"
 
+//controller
 #import "UIAlertController+NSDQuicker.h"
 
 #endif /* NeeSUIKitCategory_h */

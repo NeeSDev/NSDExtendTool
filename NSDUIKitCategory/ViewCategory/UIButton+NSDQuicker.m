@@ -6,9 +6,9 @@
 //  Copyright © 2018年 ballteam. All rights reserved.
 //
 
-#import "UIButton+NSDQuickCoding.h"
+#import "UIButton+NSDQuicker.h"
 
-@implementation UIButton (NSDQuickCoding)
+@implementation UIButton (NSDQuicker)
 +(instancetype)nsd_GetWithTitle:(NSString *)title
                            Font:(nonnull UIFont *)font
                           Color:(UIColor *)color;

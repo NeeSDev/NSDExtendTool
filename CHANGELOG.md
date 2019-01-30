@@ -2,6 +2,14 @@
 **NSDExtendTool**的所有版本的变更日志都将会在这里记录.
 
 ---
+## [V1.0.8](https://github.com/NeeSDev/NSDExtendTool/tree/1.0.8)(2019/01/30)
+
+#### Introduce
+新增NSString+NSDQuicker
+nsd_GetDictionary：仅支持json string使用
+nsd_IsEmpty：快速判断是否为@”“
+
+---
 ## [V1.0.7](https://github.com/NeeSDev/NSDExtendTool/tree/1.0.7)(2019/01/29)
 
 #### Introduce

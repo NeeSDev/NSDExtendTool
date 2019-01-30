@@ -6,9 +6,9 @@
 //  Copyright © 2018年 ballteam. All rights reserved.
 //
 
-#import "UILabel+NSDQuickCoding.h"
+#import "UILabel+NSDQuicker.h"
 
-@implementation UILabel (NSDQuickCoding)
+@implementation UILabel (NSDQuicker)
 
 +(instancetype)nsd_GetWithText:(NSString *)text
                           font:(UIFont *)font

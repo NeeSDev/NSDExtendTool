@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  @brief UIImage快速coding初始化
  */
-@interface UIImageView (NSDQuickCoding)
+@interface UIImageView (NSDQuicker)
 
 
 /**

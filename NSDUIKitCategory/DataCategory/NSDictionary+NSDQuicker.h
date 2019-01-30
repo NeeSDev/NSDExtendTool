@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  @brief 字典拓展处理
  */
-@interface NSDictionary (NSDConversion)
+@interface NSDictionary (NSDQuicker)
 
 /**
  @brief 转换成json字符串

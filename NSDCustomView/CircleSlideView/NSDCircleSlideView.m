@@ -86,18 +86,16 @@
         self.nsd_CurrentIndex = -1;
         
         __weak typeof(self) weakSelf = self;
-        [[RACSignal interval:intervalTime onScheduler:[RACScheduler scheduler]] subscribeNext:^(NSDate * _Nullable x) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                __strong typeof(weakSelf) strongSelf = weakSelf;
-                NSInteger index = strongSelf.nsd_CurrentIndex + 1;
+        [[RACSignal interval:intervalTime onScheduler:[RACScheduler mainThreadScheduler]] subscribeNext:^(NSDate * _Nullable x) {
+            __strong typeof(weakSelf) strongSelf = weakSelf;
+            NSInteger index = strongSelf.nsd_CurrentIndex + 1;
 
-                if (strongSelf.nsd_PageControl) {
-                    strongSelf.nsd_CurrentIndex = index%realCount;
-                    [strongSelf.nsd_PageControl setCurrentPage:strongSelf.nsd_CurrentIndex];
-                }
+            if (strongSelf.nsd_PageControl) {
+                strongSelf.nsd_CurrentIndex = index%realCount;
+                [strongSelf.nsd_PageControl setCurrentPage:strongSelf.nsd_CurrentIndex];
+            }
 
-                [scroll setContentOffset:CGPointMake((index + 1)*CGRectGetWidth(scroll.frame), 0) animated:YES];
-            });
+            [scroll setContentOffset:CGPointMake((index + 1)*CGRectGetWidth(scroll.frame), 0) animated:YES];
         }];
     }
     else
