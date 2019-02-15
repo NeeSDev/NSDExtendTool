@@ -27,11 +27,11 @@ typedef NS_ENUM(NSInteger, NSDQuickViewStatus ) {
 
 #pragma mark - ========== Class Methods ====================
 /**
- @brief 快速获取透明背景的view
-
+ @brief 快速获取颜色背景的view
+ 
  @return UIView
  */
-+(instancetype)nsd_GetClearColorView;
++(instancetype)nsd_GetColorView:(UIColor *)color Size:(CGSize)size;
 #pragma mark - ========== Instance Methods ====================
 /**
  @brief 如果已经添加，从superview上移除

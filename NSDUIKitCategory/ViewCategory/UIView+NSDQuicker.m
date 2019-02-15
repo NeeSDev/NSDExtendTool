@@ -12,10 +12,11 @@
 @implementation UIView (NSDQuicker)
 
 #pragma mark - ========== Class Methods ====================
-+(instancetype)nsd_GetClearColorView
++(instancetype)nsd_GetColorView:(UIColor *)color Size:(CGSize)size;
 {
     UIView *clearView = [UIView new];
-    clearView.backgroundColor = [UIColor clearColor];
+    clearView.backgroundColor = color;
+    clearView.frame = CGRectMake(0, 0, size.width, size.height);
     return clearView;
 }
 

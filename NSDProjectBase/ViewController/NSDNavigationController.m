@@ -53,4 +53,14 @@
 {
     return [_currentViewController preferredInterfaceOrientationForPresentation];
 }
+
+/**
+ @brief 导航栏样式使用viewcontroller来设置
+
+ @return viewcontroller
+ */
+-(UIViewController *)childViewControllerForStatusBarStyle
+{
+    return self.topViewController;
+}
 @end

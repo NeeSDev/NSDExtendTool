@@ -44,7 +44,6 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self nsd_SetStatusBarStyle];
     [self nsd_SetNavBackgroudWithImageName:[self nsd_GetNavigationBarBackImageName]];
 }
 
@@ -86,14 +85,6 @@
 -(void)nsd_NotificationRegister{}
 
 #pragma mark - ========== setter ====================
-/**
- @brief 设置statusBar颜色
- */
--(void)nsd_SetStatusBarStyle
-{
-    [[UIApplication sharedApplication] setStatusBarStyle:[self preferredStatusBarStyle] animated:YES];
-}
-
 -(void)nsd_SetNavBackItemWithImageName:(NSString *)imageName
 {
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
