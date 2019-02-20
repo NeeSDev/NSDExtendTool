@@ -77,6 +77,18 @@ NS_ASSUME_NONNULL_BEGIN
  
  @param target 方法调用对象
  @param action 响应方法
+ @param imageName 背景图
+ @return Button
+ */
++(instancetype)nsd_GetWithTarget:(id)target
+                          action:(SEL)action
+                       ImageName:(NSString *)imageName;
+
+/**
+ @brief 快速初始化一个Button
+ 
+ @param target 方法调用对象
+ @param action 响应方法
  @param backgroundColor 按钮背景色
  @return Button
  */

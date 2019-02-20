@@ -76,6 +76,17 @@
 
 +(instancetype)nsd_GetWithTarget:(id)target
                           action:(SEL)action
+                       ImageName:(NSString *)imageName
+{
+    UIButton *btn =[UIButton nsd_GetWithTarget:target
+                                        action:action
+                               backgroundColor:[UIColor clearColor]];
+    [btn nsd_SetNormalImageWithImageName:imageName];
+    return btn;
+}
+
++(instancetype)nsd_GetWithTarget:(id)target
+                          action:(SEL)action
                            Title:(NSString *)title
                             Font:(UIFont *)font
                       TitleColor:(UIColor *)titleColor
