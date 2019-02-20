@@ -11,5 +11,6 @@
 
 #import "NSDCircleSlideView.h"
 #import "NSDImageTextView.h"
+#import "NSDCollectionViewLeftAlignedLayout.h"
 
 #endif /* NSDCustomView_h */
