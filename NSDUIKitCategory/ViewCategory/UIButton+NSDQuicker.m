@@ -103,7 +103,6 @@
 -(void)nsd_SetNormalTitle:(NSString *)title
 {
     [self setTitle:title forState:UIControlStateNormal];
-    [self sizeToFit];
 }
 
 -(void)nsd_SetNormalTitleColor:(UIColor *)titleColor

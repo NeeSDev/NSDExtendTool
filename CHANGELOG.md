@@ -2,6 +2,13 @@
 **NSDExtendTool**的所有版本的变更日志都将会在这里记录.
 
 ---
+## [V1.0.10](https://github.com/NeeSDev/NSDExtendTool/tree/1.0.10)(2019/02/20)
+
+#### Introduce
+新增NSDCollectionViewLeftAlignedLayout
+使collection item 左对齐
+
+---
 ## [V1.0.9](https://github.com/NeeSDev/NSDExtendTool/tree/1.0.9)(2019/02/19)
 
 #### Introduce
