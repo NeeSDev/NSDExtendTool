@@ -282,7 +282,7 @@
     _nsd_SubLabel.textColor = _nsd_SubDisableColor;
 }
 
--(void)setImageTextStatus:(NSDImageTextStatus)imageTextStatus
+-(void)nsd_SetImageTextStatus:(NSDImageTextStatus)imageTextStatus
 {
     _nsd_ImageTextStatus = imageTextStatus;
     switch (imageTextStatus) {
@@ -351,7 +351,7 @@
     ///还原状态
     if(self.nsd_IsEnableHighlight)
     {
-        [self setImageTextStatus:self.nsd_ImageTextStatus];
+        [self nsd_SetImageTextStatus:self.nsd_ImageTextStatus];
     }
     
     ///如果在点击范围内
