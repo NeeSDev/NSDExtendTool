@@ -6,7 +6,7 @@
 //  Copyright © 2019 NeeSDev. All rights reserved.
 //
 
-#import "MyRelativeLayout.h"
+#import "MyLayout.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -26,6 +26,14 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)nsd_SetViews:(NSArray<__kindof UIView *> *)viewArray
        IntervalTime:(float)intervalTime
          IsShowPage:(BOOL)isShowPage;
+
+
+/**
+ @discussion 设置轮播图层
+ 
+ @param view 轮播图
+ */
+-(void)nsd_SetView:(MyFlowLayout *)view;
 @end
 
 NS_ASSUME_NONNULL_END

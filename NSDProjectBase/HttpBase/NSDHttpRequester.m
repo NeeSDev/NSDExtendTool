@@ -58,7 +58,7 @@
     
     NSMutableURLRequest *request = [requestSerializer multipartFormRequestWithMethod:@"POST"
                                                                            URLString:self.requestUrl
-                                                                          parameters:nil
+                                                                          parameters:self.requestParam
                                                            constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
                                                                [formData appendPartWithFileData:data name:fileKey fileName:fileName mimeType:fileType];
                                                            }error:nil];
