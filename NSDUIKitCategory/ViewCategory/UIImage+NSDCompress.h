@@ -96,4 +96,11 @@
                                    Scale:(BOOL)Scale;
 
 
+/**
+ @brief 去除图片旋转的问题
+
+ @return 旋转后的UIImage
+ */
+- (UIImage *)nsd_FixOrientation;
+
 @end
