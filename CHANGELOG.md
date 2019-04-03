@@ -1,5 +1,13 @@
 # 版本变更日志
 **NSDExtendTool**的所有版本的变更日志都将会在这里记录.
+
+---
+## [V1.1.1](https://github.com/NeeSDev/NSDExtendTool/tree/1.1.1)(2019/04/03)
+
+#### Introduce
+UIImage新增去除旋转标签方法
+
+
 ---
 ## [V1.1.0](https://github.com/NeeSDev/NSDExtendTool/tree/1.1.0)(2019/03/20)
 
