@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "NSDExtendTool"
-  s.version      = "1.1.1"
+  s.version      = "2。0.0"
   s.summary      = "日常开发归纳"
 
   # This description is used to generate tags and improve search results.
