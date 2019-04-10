@@ -10,22 +10,7 @@
 
 @implementation UIAlertController (NSDQuicker)
 
-
-+(void)nsd_AlertWithTips:(NSString *)tips
-                 Tag:(__kindof UIViewController *)controller
-         ConfirmText:(NSString *)confirmText
-        ConfirmBlock:(void(^)(void))confirmBlock
-{
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:tips preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:confirmText style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        if (confirmBlock) {
-            confirmBlock();
-        }
-    }]];
-    
-    [controller presentViewController:alert animated:YES completion:nil];
-}
-
+#pragma mark - ========== 一个按钮 ====================
 +(void)nsd_AlertWithTitle:(NSString *)title
                      Tips:(NSString *)tips
                       Tag:(__kindof UIViewController *)controller
@@ -42,61 +27,19 @@
     [controller presentViewController:alert animated:YES completion:nil];
 }
 
-+(void)nsd_AlertWithTips:(NSString *)tips Tag:(__kindof UIViewController *)controller
++(void)nsd_AlertWithTitle:(nullable NSString *)title
+                     Tips:(NSString *)tips
+                      Tag:(__kindof UIViewController *)controller
+             ConfirmBlock:(void(^)(void))confirmBlock
 {
-    [UIAlertController nsd_AlertWithTips:tips
-                                     Tag:controller
-                             ConfirmText:@"确定"
-                            ConfirmBlock:nil];
+    [UIAlertController nsd_AlertWithTitle:title
+                                     Tips:tips
+                                      Tag:controller
+                              ConfirmText:@"确定"
+                             ConfirmBlock:confirmBlock];
 }
 
-+(void)nsd_AlertWithTips:(NSString *)tips
-                     Tag:(__kindof UIViewController *)controller
-            ConfirmBlock:(void(^)(void))confirmBlock
-{
-    [UIAlertController nsd_AlertWithTips:tips
-                                     Tag:controller
-                             ConfirmText:@"确定"
-                            ConfirmBlock:confirmBlock];
-}
-
-+(void)nsd_AlertWithTips:(NSString *)tips
-                     Tag:(__kindof UIViewController *)controller
-             ConfirmText:(NSString *)confirmText
-              CancelText:(NSString *)cancelText
-            ConfirmBlock:(void(^)(void))confirmBlock
-             CancelBlock:(void(^)(void))cancelBlock
-{
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:tips preferredStyle:UIAlertControllerStyleAlert];
-    
-    [alert addAction:[UIAlertAction actionWithTitle:confirmText style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        if (confirmBlock) {
-            confirmBlock();
-        }
-    }]];
-    
-    [alert addAction:[UIAlertAction actionWithTitle:cancelText style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        if (cancelBlock) {
-            cancelBlock();
-        }
-    }]];
-    
-    [controller presentViewController:alert animated:YES completion:nil];
-}
-
-+(void)nsd_AlertWithTips:(NSString *)tips
-                     Tag:(__kindof UIViewController *)controller
-                ConfirmBlock:(void (^)(void))confirmBlock
-             CancelBlock:(void (^)(void))cancelBlock
-{
-    [UIAlertController nsd_AlertWithTips:tips
-                                     Tag:controller
-                             ConfirmText:@"确认"
-                              CancelText:@"取消"
-                            ConfirmBlock:confirmBlock
-                             CancelBlock:cancelBlock];
-}
-
+#pragma mark - ========== 两个按钮 ====================
 +(void)nsd_AlertWithTitle:(NSString *)title
                      Tips:(NSString *)tips
                       Tag:(__kindof UIViewController *)controller
@@ -131,7 +74,7 @@
     [UIAlertController nsd_AlertWithTitle:title
                                      Tips:tips
                                       Tag:controller
-                              ConfirmText:@"确认"
+                              ConfirmText:@"确定"
                                CancelText:@"取消"
                              ConfirmBlock:confirmBlock
                               CancelBlock:cancelBlock];

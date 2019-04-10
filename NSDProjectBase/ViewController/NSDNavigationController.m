@@ -8,12 +8,6 @@
 
 #import "NSDNavigationController.h"
 
-@interface NSDNavigationController ()
-{
-    UIViewController *_currentViewController;
-}
-@end
-
 @implementation NSDNavigationController
 
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
@@ -21,16 +15,7 @@
     if ([self.viewControllers count] != 0) {
         viewController.hidesBottomBarWhenPushed = YES;
     }
-    _currentViewController = viewController;
     [super pushViewController:viewController animated:YES];
-}
-
--(UIViewController *)popViewControllerAnimated:(BOOL)animated
-{
-    if (self.viewControllers.count>1) {
-        _currentViewController = [self.viewControllers objectAtIndex:self.viewControllers.count-2];
-    }
-    return [super popViewControllerAnimated:YES];
 }
 
 /**
@@ -40,7 +25,7 @@
  */
 -(UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
-    return [_currentViewController supportedInterfaceOrientations];
+    return [self.topViewController supportedInterfaceOrientations];
 }
 
 
@@ -51,7 +36,7 @@
  */
 -(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
 {
-    return [_currentViewController preferredInterfaceOrientationForPresentation];
+    return [self.topViewController preferredInterfaceOrientationForPresentation];
 }
 
 /**

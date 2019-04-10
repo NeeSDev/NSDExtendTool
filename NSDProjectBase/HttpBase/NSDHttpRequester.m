@@ -56,7 +56,7 @@
         [requestSerializer setValue:self.requestHeader[key] forHTTPHeaderField:key];
     }
     
-    NSMutableURLRequest *request = [requestSerializer multipartFormRequestWithMethod:@"POST"
+    NSMutableURLRequest *request = [requestSerializer multipartFormRequestWithMethod:self.requestType
                                                                            URLString:self.requestUrl
                                                                           parameters:self.requestParam
                                                            constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {

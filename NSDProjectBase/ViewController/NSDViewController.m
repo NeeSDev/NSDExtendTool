@@ -7,34 +7,16 @@
 //
 
 #import "NSDViewController.h"
+#import "ReactiveObjC.h"
 
 @interface NSDViewController ()
 {
-    /**
-     @brief title
-     */
+    ///title
     NSString *_navTitle;
 }
 @end
 
 @implementation NSDViewController
-
--(void)loadView
-{
-    UIView *view = [self nsd_UIMaker];
-    if(view)
-        self.view = view;
-    else
-        [super loadView];
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    [self nsd_DataMaker];
-    [self nsd_DataRequester];
-    [self nsd_NotificationRegister];
-}
 
 -(void)dealloc{
     //移除所有通知监听
@@ -44,7 +26,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self nsd_SetNavBackgroudWithImageName:[self nsd_GetNavigationBarBackImageName]];
+    [self nsd_UpdateNavigationBarBackgroud];
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle
@@ -74,15 +56,39 @@
 }
 
 #pragma mark - ========== custom ====================
--(__kindof UIView *)nsd_UIMaker{
-    return nil;
+-(void)nsd_PopController
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
--(void)nsd_DataMaker{}
+-(void)nsd_PopRootController
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 
--(void)nsd_DataRequester{}
+-(void)nsd_PushViewController:(__kindof NSDViewController *)controller
+{
+    [self.navigationController pushViewController:controller animated:YES];
+}
 
--(void)nsd_NotificationRegister{}
+-(void)nsd_UpdateNavigationBarBackgroud
+{
+    NSString *imageName = [self nsd_GetNavigationBarBackImageName];
+    if (!imageName) {
+        [self.navigationController.navigationBar setShadowImage:nil];
+        [self.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
+    }
+    else if([imageName isEqualToString:@""])
+    {
+        [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    }
+    else
+    {
+        [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:imageName] forBarMetrics:UIBarMetricsDefault];
+    }
+}
 
 #pragma mark - ========== setter ====================
 -(void)nsd_SetNavBackItemWithImageName:(NSString *)imageName
@@ -126,19 +132,82 @@
     //设置Label背景透明
     self.navigationItem.titleView =imageView;
 }
-
--(void)nsd_SetNavRightItemWithText:(NSString *)rightText
-                              Font:(UIFont *)font
-                          RightSel:(SEL)rightSel
+#pragma mark - ========== left button ====================
+-(void)nsd_SetNavLeftItemWithText:(NSString *)rightText
+                             Font:(UIFont *)font
+                            Color:(UIColor *)color
+                        LeftBlock:(void(^)(void))leftBlock
 {
     //navigation右边设置按钮
     UIButton * transmitBt = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 50, 44)];
     [transmitBt setTitle:rightText forState:UIControlStateNormal];
     [transmitBt.titleLabel setFont:font];
-    [transmitBt setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [transmitBt addTarget:self action:rightSel forControlEvents:UIControlEventTouchUpInside];
+    [transmitBt setTitleColor:color forState:UIControlStateNormal];
+    transmitBt.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:transmitBt];
+    
+    [[transmitBt rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        leftBlock();
+    }];
+}
+
+-(void)nsd_SetNavLeftItemWithText:(NSString *)rightText
+                             Font:(UIFont *)font
+                            Color:(UIColor *)color
+                          LeftSel:(SEL)leftSel
+{
+    //navigation右边设置按钮
+    UIButton * transmitBt = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 50, 44)];
+    [transmitBt setTitle:rightText forState:UIControlStateNormal];
+    [transmitBt.titleLabel setFont:font];
+    [transmitBt setTitleColor:color forState:UIControlStateNormal];
+    [transmitBt addTarget:self action:leftSel forControlEvents:UIControlEventTouchUpInside];
+    transmitBt.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:transmitBt];
+}
+
+-(void)nsd_SetNavLeftItemWithImageNamed:(NSString *)imageName
+                              LeftBlock:(void(^)(void))leftBlock
+{
+    //navigation右边设置按钮
+    UIButton * transmitBt = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 50, 44)];
+    [transmitBt setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+    transmitBt.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:transmitBt];
+    
+    [[transmitBt rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        leftBlock();
+    }];
+}
+
+-(void)nsd_SetNavLeftItemWithImageNamed:(NSString *)imageName
+                                LeftSel:(SEL)leftSel
+{
+    //navigation右边设置按钮
+    UIButton * transmitBt = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 50, 44)];
+    [transmitBt setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+    [transmitBt addTarget:self action:leftSel forControlEvents:UIControlEventTouchUpInside];
+    transmitBt.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:transmitBt];
+}
+
+#pragma mark - ========== right button ====================
+-(void)nsd_SetNavRightItemWithText:(NSString *)rightText
+                              Font:(UIFont *)font
+                             Color:(UIColor *)color
+                        RightBlock:(void(^)(void))rightBlock
+{
+    //navigation右边设置按钮
+    UIButton * transmitBt = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 50, 44)];
+    [transmitBt setTitle:rightText forState:UIControlStateNormal];
+    [transmitBt.titleLabel setFont:font];
+    [transmitBt setTitleColor:color forState:UIControlStateNormal];
     transmitBt.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:transmitBt];
+    
+    [[transmitBt rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        rightBlock();
+    }];
 }
 
 -(void)nsd_SetNavRightItemWithText:(NSString *)rightText
@@ -157,6 +226,20 @@
 }
 
 -(void)nsd_SetNavRightItemWithImageNamed:(NSString *)imageName
+                              RightBlock:(void(^)(void))rightBlock
+{
+    //navigation右边设置按钮
+    UIButton * transmitBt = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 50, 44)];
+    [transmitBt setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+    transmitBt.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:transmitBt];
+    
+    [[transmitBt rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        rightBlock();
+    }];
+}
+
+-(void)nsd_SetNavRightItemWithImageNamed:(NSString *)imageName
                                 RightSel:(SEL)rightSel
 {
     //navigation右边设置按钮
@@ -167,23 +250,7 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:transmitBt];
 }
 
--(void)nsd_SetNavBackgroudWithImageName:(NSString *)imageName
-{
-    if (!imageName) {
-        [self.navigationController.navigationBar setShadowImage:nil];
-        [self.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
-    }
-    else if([imageName isEqualToString:@""])
-    {
-        [self.navigationController.navigationBar setShadowImage:[UIImage new]];
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-    }
-    else
-    {
-        [self.navigationController.navigationBar setShadowImage:[UIImage new]];
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:imageName] forBarMetrics:UIBarMetricsDefault];
-    }
-}
+
 
 #pragma mark - ========== setter ====================
 -(NSString *)nsd_GetNavTitle
@@ -195,30 +262,5 @@
 {
     return nil;
 }
-
-#pragma mark - ========== SEL ====================
--(void)nsd_PopController
-{
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
--(void)nsd_PopRootController
-{
-    [self.navigationController popToRootViewControllerAnimated:YES];
-}
-
--(void)nsd_PushViewController:(__kindof NSDViewController *)controller
-{
-    [self.navigationController pushViewController:controller animated:YES];
-}
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

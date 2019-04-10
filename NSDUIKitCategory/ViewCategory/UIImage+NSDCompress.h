@@ -97,9 +97,9 @@
 
 
 /**
- @brief 去除图片旋转的问题
+ @brief 去除图片旋转标签
 
- @return 旋转后的UIImage
+ @return 去除后的UIImage
  */
 - (UIImage *)nsd_FixOrientation;
 

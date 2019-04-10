@@ -12,11 +12,10 @@
 @implementation UIView (NSDQuicker)
 
 #pragma mark - ========== Class Methods ====================
-+(instancetype)nsd_GetColorView:(UIColor *)color Size:(CGSize)size;
++(instancetype)nsd_GetColorView:(UIColor *)color;
 {
     UIView *clearView = [UIView new];
     clearView.backgroundColor = color;
-    clearView.frame = CGRectMake(0, 0, size.width, size.height);
     return clearView;
 }
 
@@ -49,6 +48,7 @@
     self.layer.cornerRadius = cornerRadius;
     self.layer.borderWidth = borderWidth;
     self.layer.borderColor = borderColor.CGColor;
+    self.layer.masksToBounds = YES;
     return NSDQuickViewStatusYES;
 }
 
@@ -67,6 +67,22 @@
     {
         lineView.myWidth = lineLength;
     }
+    lineView.myBottom = 0;
+    [self addSubview:lineView];
+    return NSDQuickViewStatusYES;
+}
+
+-(NSDQuickViewStatus)nsd_SetBottomLineWithWidth:(float)width
+                                        Leading:(float)leading
+                                       Trailing:(float)trailing
+                                      LineColor:(UIColor*)lineColor
+{
+    MyBaseLayout *lineView = [MyBaseLayout new];
+    lineView.backgroundColor = lineColor;
+    lineView.myHeight = width;
+    lineView.myLeading = leading;
+    lineView.myTrailing = trailing;
+    
     lineView.myBottom = 0;
     [self addSubview:lineView];
     return NSDQuickViewStatusYES;

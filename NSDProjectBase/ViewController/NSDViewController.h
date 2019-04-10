@@ -25,30 +25,6 @@ NS_ASSUME_NONNULL_BEGIN
 -(UIStatusBarStyle)preferredStatusBarStyle;
 #pragma mark - ========== custom ====================
 /**
- @brief DescriptionUI布局,在loadView中调用
- @warning 如果通过xib或者storyBoard记载，请不要在次方法中做self.view上的布局，因为他在view加载之前先调用
- @return UIView，返回的view作为rootview，无需addsubview
- */
--(nullable __kindof UIView *)nsd_UIMaker;
-
-/**
- @brief 设置监听
- */
--(void)nsd_NotificationRegister;
-
-/**
- @brief 请求数据前设置基本数据
- @discussion 在UI布局完毕之后调用
- */
--(void)nsd_DataMaker;
-
-/**
- @brief 网络数据请求
- @discussion 在本地基本数据部署之后调用
- */
--(void)nsd_DataRequester;
-
-/**
  @brief 返回上一级controller
  */
 -(void)nsd_PopController;
@@ -65,12 +41,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 -(void)nsd_PushViewController:(__kindof NSDViewController *)controller;
 
-#pragma mark - ========== setter ====================
 /**
- @brief 设置返回按钮
+ @brief 刷新导航栏，从 -nsd_GetNavigationBarBackImageName 取值
  */
--(void)nsd_SetNavBackItemWithImageName:(NSString *)imageName;
+-(void)nsd_UpdateNavigationBarBackgroud;
 
+#pragma mark - ========== setter ====================
+#pragma mark ========== title ====================
 /**
  @brief 设置导航栏中间title（image类型）
  
@@ -95,16 +72,64 @@ NS_ASSUME_NONNULL_BEGIN
  */
 -(void)nsd_SetNavTitleItemWithView:(__kindof UIView *)view;
 
+#pragma mark ========== left button ====================
+/**
+ @brief 设置导航栏左键（单个text类型）
+ 
+ @param rightText title
+ @param font 字体
+ @param color 文字颜色
+ @param leftBlock 响应事件
+ */
+-(void)nsd_SetNavLeftItemWithText:(NSString *)rightText
+                             Font:(UIFont *)font
+                            Color:(UIColor *)color
+                        LeftBlock:(void(^)(void))leftBlock;
+
+/**
+ @brief 设置导航栏左键（单个text类型）
+ 
+ @param rightText title
+ @param font 字体
+ @param color 文字颜色
+ @param leftSel 响应事件,只能是self的方法
+ */
+-(void)nsd_SetNavLeftItemWithText:(NSString *)rightText
+                             Font:(UIFont *)font
+                            Color:(UIColor *)color
+                          LeftSel:(SEL)leftSel;
+
+/**
+ @brief 设置导航栏左键（单个image类型）
+ 
+ @param imageName 图片名称
+ @param leftBlock 响应事件
+ */
+-(void)nsd_SetNavLeftItemWithImageNamed:(NSString *)imageName
+                              LeftBlock:(void(^)(void))leftBlock;
+
+/**
+ @brief 设置导航栏左键（单个image类型）
+ 
+ @param imageName 图片名称
+ @param leftSel 响应事件,只能是self的方法
+ */
+-(void)nsd_SetNavLeftItemWithImageNamed:(NSString *)imageName
+                                LeftSel:(SEL)leftSel;
+
+#pragma mark ========== right button ====================
 /**
  @brief 设置导航栏右键（单个text类型）
  
  @param rightText title
  @param font 字体
- @param rightSel 响应事件
+ @param color 文字颜色
+ @param rightBlock 响应事件
  */
 -(void)nsd_SetNavRightItemWithText:(NSString *)rightText
                               Font:(UIFont *)font
-                          RightSel:(SEL)rightSel;
+                             Color:(UIColor *)color
+                        RightBlock:(void(^)(void))rightBlock;
 
 /**
  @brief 设置导航栏右键（单个text类型）
@@ -123,16 +148,21 @@ NS_ASSUME_NONNULL_BEGIN
  @brief 设置导航栏右键（单个image类型）
  
  @param imageName 图片名称
- @param rightSel 响应事件
+ @param rightBlock 响应事件
+ */
+-(void)nsd_SetNavRightItemWithImageNamed:(NSString *)imageName
+                              RightBlock:(void(^)(void))rightBlock;
+
+/**
+ @brief 设置导航栏右键（单个image类型）
+ 
+ @param imageName 图片名称
+ @param rightSel 响应事件,只能是self的方法
  */
 -(void)nsd_SetNavRightItemWithImageNamed:(NSString *)imageName
                                 RightSel:(SEL)rightSel;
 
 
-/**
- @brief 设置导航栏
- */
--(void)nsd_SetNavBackgroudWithImageName:(nullable NSString *)imageName;
 
 
 #pragma mark - ========== getter ====================

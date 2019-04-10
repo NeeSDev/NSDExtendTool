@@ -31,12 +31,13 @@ typedef NS_ENUM(NSInteger, NSDQuickViewStatus ) {
  
  @return UIView
  */
-+(instancetype)nsd_GetColorView:(UIColor *)color Size:(CGSize)size;
++(instancetype)nsd_GetColorView:(UIColor *)color;
+
 #pragma mark - ========== Instance Methods ====================
 /**
  @brief 如果已经添加，从superview上移除
  
- @return YES移除成功，NO没有superview
+ @return NSDQuickViewStatus
  */
 -(NSDQuickViewStatus)nsd_RemoveFromSuperView;
 
@@ -61,7 +62,8 @@ typedef NS_ENUM(NSInteger, NSDQuickViewStatus ) {
                              borderColor:(UIColor *)borderColor;
 
 /**
- @brief 快速设置圆角以及边线
+ @brief 快速设置底部边线
+ @discussion 一般用于UIKit的View，设置了gravity的MyLayout请不要使用该方法，应使用MyLayout中的设置方法
  
  @param width 宽度
  @param lineLength 长度，0默认和自己一样长
@@ -70,6 +72,21 @@ typedef NS_ENUM(NSInteger, NSDQuickViewStatus ) {
  */
 -(NSDQuickViewStatus)nsd_SetBottomLineWithWidth:(float)width
                                      LineLength:(float)lineLength
+                                      LineColor:(UIColor*)lineColor;
+
+/**
+ @brief 快速设置底部边线
+ @discussion 一般用于UIKit的View，设置了gravity的MyLayout请不要使用该方法，应使用MyLayout中的设置方法
+
+ @param width 宽度
+ @param leading 左边空间
+ @param trailing 右边空间
+ @param lineColor 边线颜色
+ @return NSDQuickViewStatus
+ */
+-(NSDQuickViewStatus)nsd_SetBottomLineWithWidth:(float)width
+                                        Leading:(float)leading
+                                       Trailing:(float)trailing
                                       LineColor:(UIColor*)lineColor;
 @end
 
