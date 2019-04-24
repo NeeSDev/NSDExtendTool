@@ -2,6 +2,12 @@
 
 各种方法的封装，便利日常开发
 
+依赖第三方列表：
+* ['ReactiveObjC', '~> 3.1.0'](https://reactivecocoa.io)
+* ['MyLayout', '~> 1.6.1'](https://github.com/youngsoft/MyLinearLayout)
+* ['AFNetworking', '~> 3.2.1'](https://github.com/AFNetworking/AFNetworking)
+* ['JSONModel', ~> '1.8.0'](http://www.jsonmodel.com)
+
 ## 使用方法
 
 ### 直接拷贝
