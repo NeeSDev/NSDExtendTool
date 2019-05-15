@@ -13,7 +13,7 @@
                       ReturnKeyType:(UIReturnKeyType)returnKeyType
                            Delegate:(id)delegate
 {
-    UITextField *textField = [UITextField new];
+    UITextField *textField = [self new];
     textField.returnKeyType = returnKeyType;
     if (delegate) {
         textField.delegate = delegate;

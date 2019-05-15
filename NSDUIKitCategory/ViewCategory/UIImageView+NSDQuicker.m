@@ -12,6 +12,6 @@
 
 +(instancetype)nsd_GetWithImageName:(NSString *)imageName
 {
-    return [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
+    return [[self alloc] initWithImage:[UIImage imageNamed:imageName]];
 }
 @end

@@ -32,6 +32,15 @@
 		18E45CCC21F82825004A4C28 /* NSDModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E45CCA21F82825004A4C28 /* NSDModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		18E45CD121F8283E004A4C28 /* NSDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E45CCD21F8283E004A4C28 /* NSDNavigationController.m */; };
 		18E45CD221F8283E004A4C28 /* NSDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E45CCE21F8283E004A4C28 /* NSDViewController.m */; };
+		9AA41775228BB84C00ACD4A1 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA41762228BB84C00ACD4A1 /* JSONValueTransformer.m */; };
+		9AA41776228BB84C00ACD4A1 /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA41765228BB84C00ACD4A1 /* JSONKeyMapper.m */; };
+		9AA41777228BB84C00ACD4A1 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA41767228BB84C00ACD4A1 /* JSONModel.m */; };
+		9AA41778228BB84C00ACD4A1 /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA41768228BB84C00ACD4A1 /* JSONModelError.m */; };
+		9AA41779228BB84C00ACD4A1 /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA4176B228BB84C00ACD4A1 /* JSONModelClassProperty.m */; };
+		9AA4177A228BB84C00ACD4A1 /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA4176F228BB84C00ACD4A1 /* JSONHTTPClient.m */; };
+		9AA4177B228BB84C00ACD4A1 /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA41770228BB84C00ACD4A1 /* JSONAPI.m */; };
+		9AA4177C228BB84C00ACD4A1 /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA41774228BB84C00ACD4A1 /* JSONModel+networking.m */; };
+		9AA41780228BBADE00ACD4A1 /* NoScaleBgButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA4177E228BBADE00ACD4A1 /* NoScaleBgButton.m */; };
 		F7489AAF2A2949FD985A1761 /* libPods-NSDExtendTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE04C9C769CBA312834A506 /* libPods-NSDExtendTools.a */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +102,25 @@
 		18E45CD021F8283E004A4C28 /* NSDNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDNavigationController.h; sourceTree = "<group>"; };
 		1AE04C9C769CBA312834A506 /* libPods-NSDExtendTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NSDExtendTools.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		289D4D704984A7917287023B /* Pods-NSDExtendTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSDExtendTools.release.xcconfig"; path = "Target Support Files/Pods-NSDExtendTools/Pods-NSDExtendTools.release.xcconfig"; sourceTree = "<group>"; };
+		9AA41762228BB84C00ACD4A1 /* JSONValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONValueTransformer.m; sourceTree = "<group>"; };
+		9AA41763228BB84C00ACD4A1 /* JSONKeyMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKeyMapper.h; sourceTree = "<group>"; };
+		9AA41764228BB84C00ACD4A1 /* JSONValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONValueTransformer.h; sourceTree = "<group>"; };
+		9AA41765228BB84C00ACD4A1 /* JSONKeyMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKeyMapper.m; sourceTree = "<group>"; };
+		9AA41767228BB84C00ACD4A1 /* JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModel.m; sourceTree = "<group>"; };
+		9AA41768228BB84C00ACD4A1 /* JSONModelError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelError.m; sourceTree = "<group>"; };
+		9AA41769228BB84C00ACD4A1 /* JSONModelClassProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelClassProperty.h; sourceTree = "<group>"; };
+		9AA4176A228BB84C00ACD4A1 /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModel.h; sourceTree = "<group>"; };
+		9AA4176B228BB84C00ACD4A1 /* JSONModelClassProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelClassProperty.m; sourceTree = "<group>"; };
+		9AA4176C228BB84C00ACD4A1 /* JSONModelError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelError.h; sourceTree = "<group>"; };
+		9AA4176D228BB84C00ACD4A1 /* JSONModelLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelLib.h; sourceTree = "<group>"; };
+		9AA4176F228BB84C00ACD4A1 /* JSONHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONHTTPClient.m; sourceTree = "<group>"; };
+		9AA41770228BB84C00ACD4A1 /* JSONAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONAPI.m; sourceTree = "<group>"; };
+		9AA41771228BB84C00ACD4A1 /* JSONModel+networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONModel+networking.h"; sourceTree = "<group>"; };
+		9AA41772228BB84C00ACD4A1 /* JSONHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONHTTPClient.h; sourceTree = "<group>"; };
+		9AA41773228BB84C00ACD4A1 /* JSONAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONAPI.h; sourceTree = "<group>"; };
+		9AA41774228BB84C00ACD4A1 /* JSONModel+networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONModel+networking.m"; sourceTree = "<group>"; };
+		9AA4177E228BBADE00ACD4A1 /* NoScaleBgButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoScaleBgButton.m; sourceTree = "<group>"; };
+		9AA4177F228BBADE00ACD4A1 /* NoScaleBgButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoScaleBgButton.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				1856448721F72248008883D8 /* NSDExtendTool.h */,
+				9AA41760228BB84C00ACD4A1 /* NSD_JSONModel */,
 				18E0805B22002AEF006C6546 /* NSDCustomView */,
 				1856447621F72011008883D8 /* NSDProjectBase */,
 				1856446421F705B1008883D8 /* NSDUIKitSubclass */,
@@ -290,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				18E0805F2200335A006C6546 /* NSDCustomView.h */,
+				9AA4177D228BBAD400ACD4A1 /* NoScaleBgButton */,
 				18528401221D122600ED2FA5 /* CollectionViewLayout */,
 				18E0806222004040006C6546 /* ImageTextView */,
 				18E0806022003362006C6546 /* CircleSlideView */,
@@ -333,6 +363,64 @@
 				1AE04C9C769CBA312834A506 /* libPods-NSDExtendTools.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9AA41760228BB84C00ACD4A1 /* NSD_JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				9AA4176D228BB84C00ACD4A1 /* JSONModelLib.h */,
+				9AA41761228BB84C00ACD4A1 /* JSONModelTransformations */,
+				9AA41766228BB84C00ACD4A1 /* JSONModel */,
+				9AA4176E228BB84C00ACD4A1 /* JSONModelNetworking */,
+			);
+			name = NSD_JSONModel;
+			path = ../NSD_JSONModel;
+			sourceTree = "<group>";
+		};
+		9AA41761228BB84C00ACD4A1 /* JSONModelTransformations */ = {
+			isa = PBXGroup;
+			children = (
+				9AA41762228BB84C00ACD4A1 /* JSONValueTransformer.m */,
+				9AA41763228BB84C00ACD4A1 /* JSONKeyMapper.h */,
+				9AA41764228BB84C00ACD4A1 /* JSONValueTransformer.h */,
+				9AA41765228BB84C00ACD4A1 /* JSONKeyMapper.m */,
+			);
+			path = JSONModelTransformations;
+			sourceTree = "<group>";
+		};
+		9AA41766228BB84C00ACD4A1 /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				9AA41767228BB84C00ACD4A1 /* JSONModel.m */,
+				9AA41768228BB84C00ACD4A1 /* JSONModelError.m */,
+				9AA41769228BB84C00ACD4A1 /* JSONModelClassProperty.h */,
+				9AA4176A228BB84C00ACD4A1 /* JSONModel.h */,
+				9AA4176B228BB84C00ACD4A1 /* JSONModelClassProperty.m */,
+				9AA4176C228BB84C00ACD4A1 /* JSONModelError.h */,
+			);
+			path = JSONModel;
+			sourceTree = "<group>";
+		};
+		9AA4176E228BB84C00ACD4A1 /* JSONModelNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				9AA4176F228BB84C00ACD4A1 /* JSONHTTPClient.m */,
+				9AA41770228BB84C00ACD4A1 /* JSONAPI.m */,
+				9AA41771228BB84C00ACD4A1 /* JSONModel+networking.h */,
+				9AA41772228BB84C00ACD4A1 /* JSONHTTPClient.h */,
+				9AA41773228BB84C00ACD4A1 /* JSONAPI.h */,
+				9AA41774228BB84C00ACD4A1 /* JSONModel+networking.m */,
+			);
+			path = JSONModelNetworking;
+			sourceTree = "<group>";
+		};
+		9AA4177D228BBAD400ACD4A1 /* NoScaleBgButton */ = {
+			isa = PBXGroup;
+			children = (
+				9AA4177F228BBADE00ACD4A1 /* NoScaleBgButton.h */,
+				9AA4177E228BBADE00ACD4A1 /* NoScaleBgButton.m */,
+			);
+			path = NoScaleBgButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,23 +519,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AA4177A228BB84C00ACD4A1 /* JSONHTTPClient.m in Sources */,
 				1870790121F6C5EB00EED8B5 /* UIView+NSDQuicker.m in Sources */,
 				1870790B21F6C5EB00EED8B5 /* NSDKeychainAccess.m in Sources */,
 				18E45CD221F8283E004A4C28 /* NSDViewController.m in Sources */,
 				1870790221F6C5EB00EED8B5 /* UIButton+NSDQuicker.m in Sources */,
 				186E067721F1DC4C0013E0F4 /* ViewController.m in Sources */,
 				1870790521F6C5EB00EED8B5 /* NSDictionary+NSDQuicker.m in Sources */,
+				9AA4177C228BB84C00ACD4A1 /* JSONModel+networking.m in Sources */,
 				18528404221D122600ED2FA5 /* NSDCollectionViewLeftAlignedLayout.m in Sources */,
 				18E45CCC21F82825004A4C28 /* NSDModel.m in Sources */,
 				1870790621F6C5EB00EED8B5 /* UIImageView+NSDQuicker.m in Sources */,
 				1870790321F6C5EB00EED8B5 /* UIImage+NSDCompress.m in Sources */,
+				9AA41780228BBADE00ACD4A1 /* NoScaleBgButton.m in Sources */,
+				9AA41778228BB84C00ACD4A1 /* JSONModelError.m in Sources */,
 				186E068221F1DC4D0013E0F4 /* main.m in Sources */,
+				9AA4177B228BB84C00ACD4A1 /* JSONAPI.m in Sources */,
 				1856446821F705B1008883D8 /* NSDTextView.m in Sources */,
 				18453B5721F8543D007CD41E /* UIAlertController+NSDQuicker.m in Sources */,
 				1861DC7B21F9B3F100588E0A /* UITextField+NSDQuicker.m in Sources */,
 				18E0806522004040006C6546 /* NSDImageTextView.m in Sources */,
 				1870790821F6C5EB00EED8B5 /* UILabel+NSDQuicker.m in Sources */,
 				18E0807522016812006C6546 /* NSString+NSDQuicker.m in Sources */,
+				9AA41775228BB84C00ACD4A1 /* JSONValueTransformer.m in Sources */,
+				9AA41776228BB84C00ACD4A1 /* JSONKeyMapper.m in Sources */,
+				9AA41779228BB84C00ACD4A1 /* JSONModelClassProperty.m in Sources */,
+				9AA41777228BB84C00ACD4A1 /* JSONModel.m in Sources */,
 				18E45CCB21F82825004A4C28 /* NSDStore.m in Sources */,
 				18E45CC621F8281F004A4C28 /* NSDHttpRequester.m in Sources */,
 				18E45CD121F8283E004A4C28 /* NSDNavigationController.m in Sources */,

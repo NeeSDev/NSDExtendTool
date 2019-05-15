@@ -14,7 +14,7 @@
 #pragma mark - ========== Class Methods ====================
 +(instancetype)nsd_GetColorView:(UIColor *)color;
 {
-    UIView *clearView = [UIView new];
+    UIView *clearView = [self new];
     clearView.backgroundColor = color;
     return clearView;
 }

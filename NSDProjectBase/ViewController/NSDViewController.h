@@ -14,15 +14,6 @@ NS_ASSUME_NONNULL_BEGIN
  @discussion 所有ViewController基类
  */
 @interface NSDViewController : UIViewController
-
-#pragma mark - ========== over load ====================
-/**
- @brief 默认StatusBar黑色
- @discussion 子类可重写,由于项目主视图为tabbarcontroller,所以是自动调用 -setStatusBarStyle 来设置
-
- @return style
- */
--(UIStatusBarStyle)preferredStatusBarStyle;
 #pragma mark - ========== custom ====================
 /**
  @brief 返回上一级controller

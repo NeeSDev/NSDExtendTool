@@ -14,7 +14,7 @@
                           font:(UIFont *)font
                      textColor:(UIColor *)textColor
 {
-    UILabel *label = [UILabel nsd_GetWithFont:font
+    UILabel *label = [self nsd_GetWithFont:font
                                     textColor:textColor
                                 textAlignment:NSTextAlignmentCenter];
     label.text = text;
@@ -27,7 +27,7 @@
                      textColor:(UIColor *)textColor
                  textAlignment:(NSTextAlignment)textAlignment
 {
-    UILabel *label = [UILabel nsd_GetWithFont:font
+    UILabel *label = [self nsd_GetWithFont:font
                                     textColor:textColor
                                 textAlignment:textAlignment];
     label.text = text;
@@ -38,7 +38,7 @@
 +(instancetype)nsd_GetWithFont:(UIFont *)font
                      textColor:(UIColor *)textColor
 {
-    UILabel *label = [UILabel nsd_GetWithFont:font
+    UILabel *label = [self nsd_GetWithFont:font
                                     textColor:textColor
                                 textAlignment:NSTextAlignmentCenter];
     return label;
@@ -48,7 +48,7 @@
                      textColor:(UIColor *)textColor
                  textAlignment:(NSTextAlignment)textAlignment
 {
-    UILabel *label = [UILabel new];
+    UILabel *label = [self new];
     label.font = font;
     label.textColor = textColor;
     label.textAlignment = textAlignment;

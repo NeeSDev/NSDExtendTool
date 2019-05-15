@@ -2,6 +2,12 @@
 **NSDExtendTool**的所有版本的变更日志都将会在这里记录.
 
 ---
+## [V2.1.0](https://github.com/NeeSDev/NSDExtendTool/tree/2.1.0)(2019/05/15)
+
+#### Introduce
+由于数据解析部分需要根据个人项目需求修改，所以内部直接引用了JSONModel源码。并进行了二次开发
+
+---
 ## [V2.0.0](https://github.com/NeeSDev/NSDExtendTool/tree/2.0.0)(2019/04/10)
 
 #### Introduce

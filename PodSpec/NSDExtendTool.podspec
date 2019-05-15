@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "NSDExtendTool"
-  s.version      = "2.0.0"
-  s.summary      = "日常开发归纳"
+  s.version      = "2.1.0"
+  s.summary      = "快速搭建APP,自用"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                  意在便利日常开发，将日常中经常用到的代码块封装归类
+                  意在便利日常开发，将日常中经常用到的代码块封装归类，内部使用了JSONModel源码并根据个人需求进行了修改
                    DESC
 
   s.homepage     = "https://github.com/NeeSDev"
@@ -178,11 +178,21 @@ Pod::Spec.new do |s|
     end
   end
 
+  #NSDUIKitSubclass
+  s.subspec 'NSD_JSONModel' do |ss|
+    ss.public_header_files = 'NSD_JSONModel/JSONModelLib.h'
+    ss.source_files = 'NSD_JSONModel/JSONModelLib.h'
+
+    ss.subspec 'JSONModel' do |sss|
+      sss.source_files = 'NSD_JSONModel/**/*.{h,m}'
+      sss.public_header_files = 'NSD_JSONModel/**/*.h'
+    end
+  end
+
 
   s.dependency 'ReactiveObjC', '~> 3.1.0'  #工程依赖的第三方库
   s.dependency 'MyLayout', '~> 1.6.1'
   s.dependency "AFNetworking", "~> 3.2.1"  #工程依赖的第三方库
-  s.dependency "JSONModel", "~> 1.8.0"
 
   #s.exclude_files = "Classes/Exclude"
 

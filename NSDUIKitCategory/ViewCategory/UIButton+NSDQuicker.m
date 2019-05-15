@@ -15,7 +15,7 @@
 +(instancetype)nsd_GetBlockButtonWithBackgroundImageName:(NSString *)backgroundImageName
                                                   Action:(void(^)(void))action
 {
-    UIButton *btn =[UIButton buttonWithType:UIButtonTypeCustom];
+    UIButton *btn =[self buttonWithType:UIButtonTypeCustom];
     [btn setBackgroundColor:[UIColor clearColor]];
     [btn nsd_SetNormalBackgroundImageWithImageName:backgroundImageName];
     [[btn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
@@ -30,7 +30,7 @@
                                               TitleColor:(UIColor *)titleColor
                                                   Action:(void(^)(void))action
 {
-    UIButton *btn =[UIButton nsd_GetBlockButtonWithBackgroundImageName:backgroundImageName
+    UIButton *btn =[self nsd_GetBlockButtonWithBackgroundImageName:backgroundImageName
                                                                 Action:action];
     [btn nsd_SetNormalTitle:title];
     [btn nsd_SetNormalTitleColor:titleColor];
@@ -41,7 +41,7 @@
 +(instancetype)nsd_GetBlockButtonWithImageName:(NSString *)imageName
                                         Action:(void(^)(void))action
 {
-    UIButton *btn =[UIButton buttonWithType:UIButtonTypeCustom];
+    UIButton *btn =[self buttonWithType:UIButtonTypeCustom];
     [btn setBackgroundColor:[UIColor clearColor]];
     [btn nsd_SetNormalImageWithImageName:imageName];
     [[btn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
@@ -56,7 +56,7 @@
                                     TitleColor:(UIColor *)titleColor
                                         Action:(void(^)(void))action
 {
-    UIButton *btn =[UIButton nsd_GetBlockButtonWithImageName:imageName
+    UIButton *btn =[self nsd_GetBlockButtonWithImageName:imageName
                                                       Action:action];
     [btn nsd_SetNormalTitle:title];
     [btn nsd_SetNormalTitleColor:titleColor];
@@ -67,7 +67,7 @@
 +(instancetype)nsd_GetBlockButtonWithBackgroundColor:(UIColor *)backgroundColor
                                               Action:(void(^)(void))action
 {
-    UIButton *btn =[UIButton buttonWithType:UIButtonTypeCustom];
+    UIButton *btn =[self buttonWithType:UIButtonTypeCustom];
     [btn setBackgroundColor:[UIColor clearColor]];
     [btn setBackgroundColor:backgroundColor];
     [[btn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
@@ -82,7 +82,7 @@
                                           TitleColor:(UIColor *)titleColor
                                               Action:(void(^)(void))action
 {
-    UIButton *btn =[UIButton nsd_GetBlockButtonWithBackgroundColor:backgroundColor
+    UIButton *btn =[self nsd_GetBlockButtonWithBackgroundColor:backgroundColor
                                                             Action:action];
     [btn nsd_SetNormalTitle:title];
     [btn nsd_SetNormalTitleColor:titleColor];
@@ -96,7 +96,7 @@
                                                 Target:(id)target
                                                 Action:(SEL)action
 {
-    UIButton *btn =[UIButton buttonWithType:UIButtonTypeCustom];
+    UIButton *btn =[self buttonWithType:UIButtonTypeCustom];
     [btn setBackgroundColor:[UIColor clearColor]];
     [btn nsd_SetNormalBackgroundImageWithImageName:backgroundImageName];
     [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
@@ -111,7 +111,7 @@
                                                 Target:(id)target
                                                 Action:(SEL)action
 {
-    UIButton *btn =[UIButton nsd_GetSelButtonWithBackgroundImageName:backgroundImageName
+    UIButton *btn =[self nsd_GetSelButtonWithBackgroundImageName:backgroundImageName
                                                               Target:target
                                                               Action:action];
     [btn nsd_SetNormalTitle:title];
@@ -125,7 +125,7 @@
                                       Target:(id)target
                                       Action:(SEL)action
 {
-    UIButton *btn =[UIButton buttonWithType:UIButtonTypeCustom];
+    UIButton *btn =[self buttonWithType:UIButtonTypeCustom];
     [btn setBackgroundColor:[UIColor clearColor]];
     [btn nsd_SetNormalImageWithImageName:imageName];
     [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
@@ -140,7 +140,7 @@
                                       Target:(id)target
                                       Action:(SEL)action
 {
-    UIButton *btn =[UIButton nsd_GetSelButtonWithImageName:imageName
+    UIButton *btn =[self nsd_GetSelButtonWithImageName:imageName
                                                     Target:target
                                                     Action:action];
     [btn nsd_SetNormalTitle:title];
@@ -154,7 +154,7 @@
                                             Target:(id)target
                                             Action:(SEL)action
 {
-    UIButton *btn =[UIButton buttonWithType:UIButtonTypeCustom];
+    UIButton *btn =[self buttonWithType:UIButtonTypeCustom];
     [btn setBackgroundColor:[UIColor clearColor]];
     [btn setBackgroundColor:backgroundColor];
     [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
@@ -169,7 +169,7 @@
                                             Target:(id)target
                                             action:(SEL)action
 {
-    UIButton *btn =[UIButton nsd_GetSelButtonWithBackgroundColor:backgroundColor
+    UIButton *btn =[self nsd_GetSelButtonWithBackgroundColor:backgroundColor
                                                           Target:target
                                                           Action:action];
     [btn nsd_SetNormalTitle:title];
