@@ -145,8 +145,6 @@ Pod::Spec.new do |s|
   s.subspec 'NSDProjectBase' do |ss|
     ss.public_header_files = 'NSDProjectBase/NSDProjectBase.h'
     ss.source_files = 'NSDProjectBase/NSDProjectBase.h'  #工程依赖的第三方库
-    
-    
 
     ss.subspec 'ViewController' do |sss|
       sss.source_files = 'NSDProjectBase/ViewController/*.{h,m}'
@@ -165,6 +163,9 @@ Pod::Spec.new do |s|
       sss.source_files = 'NSDProjectBase/HttpBase/*.{h,m}'
       sss.public_header_files = 'NSDProjectBase/HttpBase/*.h'
     end
+
+    ss.dependency 'NSDExtendTool/NSD_JSONModel'
+
   end
 
   #NSDUIKitSubclass
