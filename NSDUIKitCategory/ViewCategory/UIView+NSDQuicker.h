@@ -59,7 +59,7 @@ typedef NS_ENUM(NSInteger, NSDQuickViewStatus ) {
  */
 -(NSDQuickViewStatus)nsd_SetCornerRadius:(float)cornerRadius
                              BorderWidth:(float)borderWidth
-                             borderColor:(UIColor *)borderColor;
+                             borderColor:(nullable UIColor *)borderColor;
 
 /**
  @brief 快速设置底部边线

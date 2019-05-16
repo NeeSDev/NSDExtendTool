@@ -29,23 +29,6 @@ NS_ASSUME_NONNULL_BEGIN
                                                   Action:(void(^)(void))action;
 
 /**
- @brief 使用BackgroundImage初始化Button(有title)
- 
- @param backgroundImageName 背景图
- @param title 标题
- @param font 标题字体
- @param titleColor 标题文字颜色
- @param action 点击回调
- 
- @return Button
- */
-+(instancetype)nsd_GetBlockButtonWithBackgroundImageName:(NSString *)backgroundImageName
-                                                   Title:(NSString *)title
-                                                    Font:(UIFont *)font
-                                              TitleColor:(UIColor *)titleColor
-                                                  Action:(void(^)(void))action;
-
-/**
  @brief 使用Image初始化Button
  
  @param imageName 图
@@ -57,23 +40,6 @@ NS_ASSUME_NONNULL_BEGIN
                                         Action:(void(^)(void))action;
 
 /**
- @brief 使用Image初始化Button(有title)
- 
- @param imageName 图
- @param title 标题
- @param font 标题字体
- @param titleColor 标题文字颜色
- @param action 点击回调
- 
- @return Button
- */
-+(instancetype)nsd_GetBlockButtonWithImageName:(NSString *)imageName
-                                         Title:(NSString *)title
-                                          Font:(UIFont *)font
-                                    TitleColor:(UIColor *)titleColor
-                                        Action:(void(^)(void))action;
-
-/**
  @brief 使用BackgroundColor初始化Button
  
  @param backgroundColor 背景色
@@ -82,23 +48,6 @@ NS_ASSUME_NONNULL_BEGIN
  @return Button
  */
 +(instancetype)nsd_GetBlockButtonWithBackgroundColor:(UIColor *)backgroundColor
-                                              Action:(void(^)(void))action;
-
-/**
- @brief 使用BackgroundColor初始化Button(有title)
- 
- @param backgroundColor 按钮背景色
- @param title 标题
- @param font 标题字体
- @param titleColor 标题文字颜色
- @param action 点击回调
- 
- @return Button
- */
-+(instancetype)nsd_GetBlockButtonWithBackgroundColor:(UIColor *)backgroundColor
-                                               Title:(NSString *)title
-                                                Font:(UIFont *)font
-                                          TitleColor:(UIColor *)titleColor
                                               Action:(void(^)(void))action;
 
 #pragma mark - ========== 初始化 SEL ====================
@@ -116,25 +65,6 @@ NS_ASSUME_NONNULL_BEGIN
                                                 Action:(SEL)action;
 
 /**
- @brief 使用BackgroundImage初始化Button(有title)
- 
- @param backgroundImageName 背景图
- @param title 标题
- @param font 标题字体
- @param titleColor 标题文字颜色
- @param target 方法调用对象
- @param action 响应方法
- 
- @return Button
- */
-+(instancetype)nsd_GetSelButtonWithBackgroundImageName:(NSString *)backgroundImageName
-                                                 Title:(NSString *)title
-                                                  Font:(UIFont *)font
-                                            TitleColor:(UIColor *)titleColor
-                                                Target:(id)target
-                                                Action:(SEL)action;
-
-/**
  @brief 使用Image初始化Button
  
  @param imageName 图
@@ -143,25 +73,6 @@ NS_ASSUME_NONNULL_BEGIN
  @return Button
  */
 +(instancetype)nsd_GetSelButtonWithImageName:(NSString *)imageName
-                                      Target:(id)target
-                                      Action:(SEL)action;
-
-/**
- @brief 使用Image初始化Button(有title)
- 
- @param imageName 图
- @param title 标题
- @param font 标题字体
- @param titleColor 标题文字颜色
- @param target 方法调用对象
- @param action 响应方法
- 
- @return Button
- */
-+(instancetype)nsd_GetSelButtonWithImageName:(NSString *)imageName
-                                       Title:(NSString *)title
-                                        Font:(UIFont *)font
-                                  TitleColor:(UIColor *)titleColor
                                       Target:(id)target
                                       Action:(SEL)action;
 
@@ -177,25 +88,6 @@ NS_ASSUME_NONNULL_BEGIN
 +(instancetype)nsd_GetSelButtonWithBackgroundColor:(UIColor *)backgroundColor
                                             Target:(id)target
                                             Action:(SEL)action;
-
-/**
- @brief 使用BackgroundColor初始化Button(有title)
- 
- @param backgroundColor 按钮背景色
- @param title 标题
- @param font 标题字体
- @param titleColor 标题文字颜色
- @param target 方法调用对象
- @param action 响应方法
- 
- @return Button
- */
-+(instancetype)nsd_GetSelButtonWithBackgroundColor:(UIColor *)backgroundColor
-                                             Title:(NSString *)title
-                                              Font:(UIFont *)font
-                                        TitleColor:(UIColor *)titleColor
-                                            Target:(id)target
-                                            action:(SEL)action;
 #pragma mark - ========== 设置 ====================
 /**
  @brief 设置按钮文字
@@ -220,7 +112,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 -(void)nsd_SetNormalTitle:(NSString *)title
                      Font:(UIFont *)font
-               TitleColor:(UIColor *)titleColor;
+                    Color:(UIColor *)titleColor;
 
 
 /**
@@ -245,7 +137,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param titleColor titleColor
  */
 -(void)nsd_SetSelectedTitle:(NSString *)title
-                 TitleColor:(UIColor *)titleColor;
+                      Color:(UIColor *)titleColor;
 
 /**
  @brief 设置一般状态的图片
