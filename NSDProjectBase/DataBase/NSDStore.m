@@ -67,7 +67,7 @@
     @try {
         NSString *filePath = [self nsd_CreateFilePathWithName:DATA_IDENTIFY_CACHE];
         NSString*  tempstr = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
-        if(tempstr != nil)
+        if(tempstr != nil && [self.dataIdentify isEqualToString:@""])
         {
             self.dataIdentify = tempstr;
         }
