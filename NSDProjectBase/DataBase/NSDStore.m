@@ -82,6 +82,9 @@
             //有当前数据标识就一定有对应的用户数据
             if(![self.dataIdentify isEqualToString:@""])
                 self.dataDic = [self.storeDataDic objectForKey:self.dataIdentify];
+            else {
+                self.dataDic = [NSMutableDictionary new];
+            }
         }
     }
     @catch (NSException * e) {
