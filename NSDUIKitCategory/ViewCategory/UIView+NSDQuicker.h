@@ -29,9 +29,19 @@ typedef NS_ENUM(NSInteger, NSDQuickViewStatus ) {
 /**
  @brief 快速获取颜色背景的view
  
+ @param color 颜色
  @return UIView
  */
 +(instancetype)nsd_GetColorView:(UIColor *)color;
+
+/**
+ @brief 快速获取颜色背景的view
+ 
+ @param color 颜色
+ @param size 尺寸
+ @return UIView
+ */
++(instancetype)nsd_GetColorView:(UIColor *)color Size:(CGSize)size;
 
 #pragma mark - ========== Instance Methods ====================
 /**

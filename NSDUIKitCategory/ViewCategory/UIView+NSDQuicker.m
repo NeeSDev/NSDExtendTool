@@ -19,6 +19,14 @@
     return clearView;
 }
 
++(instancetype)nsd_GetColorView:(UIColor *)color Size:(CGSize)size
+{
+    UIView *clearView = [self new];
+    clearView.backgroundColor = color;
+    clearView.frame = CGRectMake(0, 0, size.width, size.height);
+    return clearView;
+}
+
 
 #pragma mark - ========== Instance Methods ====================
 -(NSDQuickViewStatus)nsd_RemoveFromSuperView
