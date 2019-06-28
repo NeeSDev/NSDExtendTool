@@ -393,7 +393,8 @@ static JSONKeyMapper* globalKeyMapper = nil;
                             JSONModelError* dataErr = [JSONModelError errorInvalidDataWithMessage:msg];
                             *err = [dataErr errorByPrependingKeyPathComponent:property.name];
                         }
-                        return NO;
+                        //没有值，跳过
+                        continue;
                     }
                 }
 
