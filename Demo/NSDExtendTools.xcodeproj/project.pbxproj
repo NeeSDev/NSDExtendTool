@@ -32,6 +32,7 @@
 		18E45CCC21F82825004A4C28 /* NSDModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E45CCA21F82825004A4C28 /* NSDModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		18E45CD121F8283E004A4C28 /* NSDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E45CCD21F8283E004A4C28 /* NSDNavigationController.m */; };
 		18E45CD221F8283E004A4C28 /* NSDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E45CCE21F8283E004A4C28 /* NSDViewController.m */; };
+		22D6E367F536A11E454FBCAC /* Pods_NSDExtendTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5DE7C55084BBC8F6213CAF /* Pods_NSDExtendTools.framework */; };
 		9AA41775228BB84C00ACD4A1 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA41762228BB84C00ACD4A1 /* JSONValueTransformer.m */; };
 		9AA41776228BB84C00ACD4A1 /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA41765228BB84C00ACD4A1 /* JSONKeyMapper.m */; };
 		9AA41777228BB84C00ACD4A1 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA41767228BB84C00ACD4A1 /* JSONModel.m */; };
@@ -41,7 +42,6 @@
 		9AA4177B228BB84C00ACD4A1 /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA41770228BB84C00ACD4A1 /* JSONAPI.m */; };
 		9AA4177C228BB84C00ACD4A1 /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA41774228BB84C00ACD4A1 /* JSONModel+networking.m */; };
 		9AA41780228BBADE00ACD4A1 /* NoScaleBgButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA4177E228BBADE00ACD4A1 /* NoScaleBgButton.m */; };
-		F7489AAF2A2949FD985A1761 /* libPods-NSDExtendTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE04C9C769CBA312834A506 /* libPods-NSDExtendTools.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,8 +100,8 @@
 		18E45CCE21F8283E004A4C28 /* NSDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDViewController.m; sourceTree = "<group>"; };
 		18E45CCF21F8283E004A4C28 /* NSDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDViewController.h; sourceTree = "<group>"; };
 		18E45CD021F8283E004A4C28 /* NSDNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDNavigationController.h; sourceTree = "<group>"; };
-		1AE04C9C769CBA312834A506 /* libPods-NSDExtendTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NSDExtendTools.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		289D4D704984A7917287023B /* Pods-NSDExtendTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSDExtendTools.release.xcconfig"; path = "Target Support Files/Pods-NSDExtendTools/Pods-NSDExtendTools.release.xcconfig"; sourceTree = "<group>"; };
+		4D5DE7C55084BBC8F6213CAF /* Pods_NSDExtendTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NSDExtendTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AA41762228BB84C00ACD4A1 /* JSONValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONValueTransformer.m; sourceTree = "<group>"; };
 		9AA41763228BB84C00ACD4A1 /* JSONKeyMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKeyMapper.h; sourceTree = "<group>"; };
 		9AA41764228BB84C00ACD4A1 /* JSONValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONValueTransformer.h; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7489AAF2A2949FD985A1761 /* libPods-NSDExtendTools.a in Frameworks */,
+				22D6E367F536A11E454FBCAC /* Pods_NSDExtendTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,7 +360,7 @@
 		65B1A2DAF48D76355E2C4250 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1AE04C9C769CBA312834A506 /* libPods-NSDExtendTools.a */,
+				4D5DE7C55084BBC8F6213CAF /* Pods_NSDExtendTools.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -434,6 +434,7 @@
 				186E066B21F1DC4C0013E0F4 /* Sources */,
 				186E066C21F1DC4C0013E0F4 /* Frameworks */,
 				186E066D21F1DC4C0013E0F4 /* Resources */,
+				D340113F7883A0014560F439 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -510,6 +511,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D340113F7883A0014560F439 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NSDExtendTools/Pods-NSDExtendTools-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NSDExtendTools/Pods-NSDExtendTools-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NSDExtendTools/Pods-NSDExtendTools-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

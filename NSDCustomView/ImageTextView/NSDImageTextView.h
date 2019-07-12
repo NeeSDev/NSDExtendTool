@@ -6,7 +6,7 @@
 //  Copyright © 2019 Nee. All rights reserved.
 //
 
-#import "MyLinearLayout.h"
+@import MyLayout;
 
 NS_ASSUME_NONNULL_BEGIN
 
