@@ -6,7 +6,8 @@
 //  Copyright © 2019 NeeSDev. All rights reserved.
 //
 
-@import MyLayout;
+#import "MyLayout.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 /**

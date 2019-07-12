@@ -298,7 +298,7 @@ static JSONKeyMapper* globalKeyMapper = nil;
                 JSONModelError* dataErr = [JSONModelError errorInvalidDataWithMessage:msg];
                 *err = [dataErr errorByPrependingKeyPathComponent:property.name];
             }
-            return NO;
+            continue;
         }
 
         Class jsonValueClass = [jsonValue class];
@@ -320,7 +320,7 @@ static JSONKeyMapper* globalKeyMapper = nil;
                 JSONModelError* dataErr = [JSONModelError errorInvalidDataWithMessage:msg];
                 *err = [dataErr errorByPrependingKeyPathComponent:property.name];
             }
-            return NO;
+            continue;
         }
 
         //check if there's matching property in the model
@@ -370,7 +370,7 @@ static JSONKeyMapper* globalKeyMapper = nil;
                     {
                         *err = [initErr errorByPrependingKeyPathComponent:property.name];
                     }
-                    return NO;
+                    continue;
                 }
                 if (![value isEqual:[self valueForKey:property.name]]) {
                     [self setValue:value forKey: property.name];
@@ -463,7 +463,7 @@ static JSONKeyMapper* globalKeyMapper = nil;
                             JSONModelError* dataErr = [JSONModelError errorInvalidDataWithTypeMismatch:msg];
                             *err = [dataErr errorByPrependingKeyPathComponent:property.name];
                         }
-                        return NO;
+                        continue;
                     }
                 } else {
                     // 3.4) handle "all other" cases (if any)
