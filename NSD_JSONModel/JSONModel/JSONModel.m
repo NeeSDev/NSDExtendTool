@@ -287,6 +287,16 @@ static JSONKeyMapper* globalKeyMapper = nil;
             jsonValue = dict[jsonKeyPath];
         }
 
+        // 波峰没取到的值，使用原始属性name再取一次
+        if (isNull(jsonValue)) {
+            @try {
+                jsonValue = [dict valueForKeyPath: property.name];
+            }
+            @catch (NSException *exception) {
+                jsonValue = dict[property.name];
+            }
+        }
+        
         //check for Optional properties
         if (isNull(jsonValue)) {
             //skip this property, continue with next property
