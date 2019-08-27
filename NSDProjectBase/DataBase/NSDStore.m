@@ -53,7 +53,7 @@
 {
     _dataIdentify = [dataIdentify copy];
     if ([_dataIdentify isEqualToString:@""]) {
-        _dataIdentify = default_identify;
+        _dataIdentify = nsd_default_identify;
     }
 }
 
