@@ -73,7 +73,7 @@
         {
             self.dataIdentify = tempstr;
         }else {
-            self.dataIdentify = default_identify;
+            self.dataIdentify = nsd_default_identify;
         }
         
         
