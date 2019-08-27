@@ -7,7 +7,7 @@
 //
 
 #import "NSDModel.h"
-
+#define default_identify @"defalut"
 /**
  @discussion 本地存储基类
  @discussion 支持存储多账户数据

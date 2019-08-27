@@ -52,6 +52,9 @@
 -(void)nsd_SetCurrentDataIdentify:(NSString *)dataIdentify
 {
     _dataIdentify = [dataIdentify copy];
+    if ([_dataIdentify isEqualToString:@""]) {
+        _dataIdentify = default_identify;
+    }
 }
 
 -(NSString *)nsd_GetCurrentDataIdentify
@@ -63,13 +66,14 @@
 //读取
 -(void)restoreData
 {
-    //对象反序列化
     @try {
         NSString *filePath = [self nsd_CreateFilePathWithName:DATA_IDENTIFY_CACHE];
         NSString*  tempstr = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
-        if(tempstr != nil && [self.dataIdentify isEqualToString:@""])
+        if(tempstr != nil )
         {
             self.dataIdentify = tempstr;
+        }else {
+            self.dataIdentify = default_identify;
         }
         
         
@@ -79,9 +83,7 @@
         {
             self.storeDataDic = tempdic;
             
-            //有当前数据标识就一定有对应的用户数据
-            if(![self.dataIdentify isEqualToString:@""])
-                self.dataDic = [self.storeDataDic objectForKey:self.dataIdentify] ?: [NSMutableDictionary new];
+            self.dataDic = [self.storeDataDic objectForKey:self.dataIdentify] ?: [NSMutableDictionary new];
         }
     }
     @catch (NSException * e) {
