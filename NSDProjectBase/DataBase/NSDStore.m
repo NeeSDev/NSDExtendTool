@@ -68,14 +68,15 @@
 {
     @try {
         NSString *filePath = [self nsd_CreateFilePathWithName:DATA_IDENTIFY_CACHE];
-        NSString*  tempstr = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
-        if(tempstr != nil && ![tempstr isEqualToString:@""] )
-        {
-            self.dataIdentify = tempstr;
-        }else {
-            self.dataIdentify = nsd_default_identify;
+        if([self.dataIdentify isEqualToString:@""]) {
+            NSString*  tempstr = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
+            if(tempstr != nil && ![tempstr isEqualToString:@""] )
+            {
+                self.dataIdentify = tempstr;
+            }else {
+                self.dataIdentify = nsd_default_identify;
+            }
         }
-        
         
         filePath = [self nsd_CreateFilePathWithName:ALL_DATA_CACHE];
         NSMutableDictionary* tempdic = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
