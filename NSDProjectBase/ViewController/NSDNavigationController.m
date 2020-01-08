@@ -10,6 +10,15 @@
 
 @implementation NSDNavigationController
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.modalPresentationStyle = UIModalPresentationFullScreen;
+    }
+    return self;
+}
+
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     if ([self.viewControllers count] != 0) {
